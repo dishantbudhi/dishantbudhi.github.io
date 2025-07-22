@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Dishant Budhi | Product Manager & Analyst</title>
     <link rel="icon" type="image/png" href="images/minilogo.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
     <div class="page-wrapper">
         <div class="dynamic-bg">
             <div class="bg-block block-1"></div>
@@ -18,53 +22,67 @@
             <div class="bg-block block-3"></div>
         </div>
 
-        <nav class="navbar">
+        <header class="navbar">
             <div class="nav-container">
                 <a href="./" class="logo" data-text="dB">
                     <img src="images/logo.png" alt="dB Logo">
                 </a>
-                <div class="nav-links">
+                <nav class="nav-links">
                     <a href="about/" data-text="About">About</a>
                     <a href="experience/" data-text="Experience">Experience</a>
                     <a href="projects/" data-text="Projects">Projects</a>
                     <a href="contact/" data-text="Contact">Contact</a>
-                </div>
+                </nav>
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     <span class="nav-toggle-icon"></span>
                 </button>
             </div>
-        </nav>
+        </header>
 
         <main class="container">
             <section class="hero-section">
-                <div class="hero-content">
+                <div class="hero-content animate-fade-in-up">
                     <h1 class="hero-title">
                         <span class="word">Strategy</span>
-                        <span class="word">and</span>
+                        <span class="word">Meets</span>
                         <span class="word accent">Execution.</span>
                     </h1>
                     <p class="hero-description">
-                        As a Computer Science and Business student at Northeastern, I combine technical knowledge with business strategy to solve complex problems and deliver measurable results.
+                        I build impactful products by blending deep technical knowledge with a sharp business acumen. As a Computer Science and Business student at Northeastern, I thrive at the intersection of data, strategy, and user-centered design.
                     </p>
-                    <a href="contact/" class="cta-button">
-                        <span class="button-text">Connect with Me</span>
+                    <a href="projects/" class="cta-button">
+                        <span class="button-text">View My Work</span>
                         <span class="button-icon">→</span>
                     </a>
                 </div>
             </section>
 
-            <section class="cards-section">
-                <h2 class="section-title scroll-animate">My Approach</h2>
+            <section class="welcome-section scroll-animate">
+                <div class="welcome-grid">
+                    <div class="welcome-image">
+                        <img src="images/pic1.png" alt="Dishant Budhi">
+                    </div>
+                    <div class="welcome-content">
+                        <h2 class="section-title">Welcome.</h2>
+                        <p>I'm a product manager and analyst driven by a passion for solving complex problems. I believe the best products are born from a deep understanding of user needs and a relentless focus on delivering value. My goal is to not just build products that work, but to build products that matter.</p>
+                        <p>My approach is rooted in a disciplined, data-informed process. I excel at translating raw data into actionable insights, and I have a proven track record of leading projects from concept to launch.</p>
+                        <a href="about/" class="text-link">More About Me →</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="cards-section scroll-animate" data-stagger-children>
+                <h2 class="section-title">My Approach</h2>
                 <div class="cards-grid">
-                    <article class="feature-card scroll-animate">
+                    <article class="feature-card">
                         <div class="card-number">01</div>
                         <h3>Data-Informed Strategy</h3>
-                        <p>I believe the best decisions are guided by evidence. My work begins with a deep dive into the data to uncover insights that lead to effective, sustainable strategies.</p>
+                        <p>I believe the best decisions are guided by evidence. My work begins with a deep dive into the data to uncover insights that lead to effective, sustainable strategies. This analytical foundation allows me to identify opportunities, mitigate risks, and build products that are set up for success from day one.</p>
                     </article>
-                    <article class="feature-card scroll-animate">
+                    <article class="feature-card">
                         <div class="card-number">02</div>
                         <h3>Disciplined Execution</h3>
-                        <p>A plan is only as good as its implementation. I have a track record of seeing projects through from start to finish, ensuring goals are met on time and to a high standard.</p>
+                        <p>A plan is only as good as its implementation. I have a track record of seeing projects through from start to finish, ensuring goals are met on time and to a high standard. I am adept at managing stakeholders, navigating complex requirements, and fostering a collaborative environment to ensure a seamless execution.</p>
                     </article>
                 </div>
             </section>

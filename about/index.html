@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About</title>
+    <title>About | Dishant Budhi</title>
     <link rel="icon" type="image/png" href="../images/minilogo.png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="preloader">
+        <div class="loader"></div>
+    </div>
+
     <div class="page-wrapper">
         <div class="dynamic-bg">
             <div class="bg-block block-1"></div>
@@ -18,63 +22,79 @@
             <div class="bg-block block-3"></div>
         </div>
 
-        <nav class="navbar">
+        <header class="navbar">
             <div class="nav-container">
                 <a href="../" class="logo" data-text="dB">
                     <img src="../images/logo.png" alt="dB Logo">
                 </a>
-                <div class="nav-links">
+                <nav class="nav-links">
                     <a href="../about/" data-text="About">About</a>
                     <a href="../experience/" data-text="Experience">Experience</a>
                     <a href="../projects/" data-text="Projects">Projects</a>
                     <a href="../contact/" data-text="Contact">Contact</a>
-                </div>
+                </nav>
                 <button class="nav-toggle" aria-label="Toggle navigation">
                     <span class="nav-toggle-icon"></span>
                 </button>
             </div>
-        </nav>
+        </header>
 
         <main class="container">
-            <section class="hero-section">
-                <div class="about-grid scroll-animate">
-                    <div class="about-content">
-                        <h1 class="hero-title">
-                            <span class="word">A</span>
-                            <span class="word">Disciplined</span>
-                            <span class="word accent">Approach.</span>
-                        </h1>
-                        <p class="hero-description">
-                            My dual degree in Computer Science and Business at Northeastern provides the foundation for my work, blending technical precision with strategic thinking.
-                        </p>
-                    </div>
-                    <div class="about-image">
-                        <img src="../images/pic1.png" alt="Dishant Budhi">
-                    </div>
+            <section class="about-hero-section">
+                <div class="about-intro animate-fade-in-up">
+                    <h1 class="hero-title">
+                        <span class="word">The</span>
+                        <span class="word">Architect</span>
+                        <span class="word accent">Behind the Product.</span>
+                    </h1>
+                    <p class="hero-description">
+                        My dual degree in Computer Science and Business at Northeastern is more than an academic pursuit; it's the foundation of my approach to product development. I see the world through a dual lens: one of technical precision and one of strategic vision. This allows me to not only understand how a product is built, but why it matters.
+                    </p>
                 </div>
             </section>
-            
-            <section class="cards-section">
-                <h2 class="section-title scroll-animate">My Toolkit</h2>
-                <div class="cards-grid">
-                    <div class="feature-card scroll-animate">
+
+            <section class="toolkit-section scroll-animate" data-stagger-children>
+                <h2 class="section-title">My Toolkit</h2>
+                <div class="toolkit-grid">
+                    <div class="toolkit-category">
                         <h3>Product Management</h3>
-                        <p>Agile (Scrum), Roadmapping, Stakeholder Management, User-Centered Design</p>
+                        <ul>
+                            <li>Agile (Scrum)</li>
+                            <li>Roadmapping</li>
+                            <li>Stakeholder Management</li>
+                            <li>User-Centered Design</li>
+                            <li>A/B Testing</li>
+                            <li>Go-to-Market Strategy</li>
+                        </ul>
                     </div>
-                    <div class="feature-card scroll-animate">
+                    <div class="toolkit-category">
                         <h3>Technical Skills</h3>
-                        <p>Python, Java, SQL, Data Analysis (pandas), BI Tools (Tableau, Looker), Git</p>
+                        <ul>
+                            <li>Python & Java</li>
+                            <li>SQL & Databases</li>
+                            <li>Data Analysis (pandas)</li>
+                            <li>BI Tools (Tableau, Looker)</li>
+                            <li>Git & Version Control</li>
+                            <li>AWS & REST APIs</li>
+                        </ul>
                     </div>
-                    <div class="feature-card scroll-animate">
+                    <div class="toolkit-category">
                         <h3>Strategic Thinking</h3>
-                        <p>Market Analysis, Competitive Intelligence, Business Modeling, Growth Strategy</p>
+                        <ul>
+                            <li>Market & Competitive Analysis</li>
+                            <li>Business Modeling</li>
+                            <li>Growth Strategy</li>
+                            <li>Financial Modeling</li>
+                            <li>KPI Development & Tracking</li>
+                            <li>User Research & Insights</li>
+                        </ul>
                     </div>
                 </div>
             </section>
 
-            <section class="cards-section">
-                <h2 class="section-title scroll-animate">Gallery</h2>
-                <div class="slideshow-container scroll-animate">
+            <section class="gallery-section scroll-animate">
+                <h2 class="section-title">A Glimpse Into My World</h2>
+                <div class="slideshow-container">
                     <div class="slide fade">
                         <div class="slide-aspect-ratio-box">
                             <div class="slide-bg-image" style="background-image:url(../images/pic2.png)"></div>
@@ -82,7 +102,7 @@
                         </div>
                         <div class="slide-caption">
                             <h4>Growth is a Team Sport</h4>
-                            <p>These are my collaborators and my support system.</p>
+                            <p>I believe that the best results come from collaboration. These are the people who challenge me, support me, and inspire me to be better.</p>
                         </div>
                     </div>
                     <div class="slide fade">
@@ -92,7 +112,7 @@
                         </div>
                         <div class="slide-caption">
                             <h4>The Love of the Game</h4>
-                            <p>Basketball taught me the importance of strategy and teamwork.</p>
+                            <p>Basketball has taught me invaluable lessons about strategy, teamwork, and the importance of a strong work ethic. It's a passion that I bring to everything I do.</p>
                         </div>
                     </div>
                     <div class="slide fade">
@@ -101,8 +121,8 @@
                            <img src="../images/pic4.png" alt="Junior year at Northeastern" class="slide-image">
                         </div>
                         <div class="slide-caption">
-                           <h4>Leveling Up</h4>
-                           <p>The first day of junior year—a moment to deepen my focus.</p>
+                           <h4>Always Learning, Always Growing</h4>
+                           <p>The first day of junior year at Northeastern was a reminder that every day is an opportunity to learn something new and to push myself to new heights.</p>
                         </div>
                     </div>
                     <div class="slide fade">
@@ -112,7 +132,7 @@
                         </div>
                         <div class="slide-caption">
                             <h4>Leading from the Front</h4>
-                            <p>Stepping up to direct a group of my HBS peers.</p>
+                            <p>Stepping up to direct a group of my peers at Harvard Business School was a formative experience in leadership and collaboration.</p>
                         </div>
                     </div>
 

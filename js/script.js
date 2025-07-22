@@ -1,11 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     
+    // --- PRELOADER ---
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        });
+    }
+
     // Initialize all components
     initNavigation();
     initSlideshow();
     initModal();
     initScrollAnimations();
-
 });
 
 // --- NAVIGATION ---
@@ -25,7 +36,8 @@ function initNavigation() {
     
     navLinks.forEach(link => {
         const linkUrl = new URL(link.href);
-        if (linkUrl.pathname === currentPath) {
+        // Match either the directory or the index.html file within it
+        if (linkUrl.pathname === currentPath || `${linkUrl.pathname}index.html` === currentPath) {
             link.classList.add('active');
         }
     });
@@ -102,15 +114,25 @@ function initScrollAnimations() {
     const animatedElements = document.querySelectorAll('.scroll-animate');
 
     if ('IntersectionObserver' in window) {
-        const observer = new IntersectionObserver((entries) => {
+        const observer = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+
+                    // Handle staggered children animations
+                    if (entry.target.hasAttribute('data-stagger-children')) {
+                        const children = entry.target.querySelectorAll('.feature-card, .project-card, .toolkit-category');
+                        children.forEach((child, index) => {
+                            child.setAttribute('data-stagger-child', '');
+                            child.style.setProperty('--stagger-delay', (index * 150) + 'ms');
+                        });
+                    }
+                    
                     observer.unobserve(entry.target);
                 }
             });
         }, {
-            threshold: 0.1
+            threshold: 0.15 // A bit more of the element needs to be visible
         });
 
         animatedElements.forEach(el => {
