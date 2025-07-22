@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects</title>
+    <link rel="icon" type="image/png" href="images/minilogo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="page-wrapper">
+        <div class="dynamic-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+        </div>
+
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="logo" data-text="dB">
+                    <img src="images/logo.png" alt="dB Logo">
+                </a>
+                <div class="nav-links">
+                    <a href="about.html" data-text="About">About</a>
+                    <a href="experience.html" data-text="Experience">Experience</a>
+                    <a href="projects.html" data-text="Projects">Projects</a>
+                    <a href="contact.html" data-text="Contact">Contact</a>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+
+        <main class="container">
+            <section class="about-hero">
+                <h1 class="hero-title">
+                    <span class="word">Analytics</span>
+                    <span class="word">in</span>
+                    <span class="word accent">Action.</span>
+                </h1>
+                <p class="hero-description">
+                    I apply a steady, analytical approach to every challenge. These projects show how I turn data into results.
+                </p>
+            </section>
+
+            <section class="projects-section">
+                <h2 class="section-title">Case Studies</h2>
+                
+                <div class="projects-grid">
+                    <article class="project-card" data-tilt>
+                        <div class="project-header">
+                            <h3>Spotify Listening Trends Dashboard</h3>
+                        </div>
+                        <div class="project-content">
+                            <p>This project was an exercise in finding meaningful patterns in a large dataset. I analyzed 12 months of streaming data, segmented user habits, and developed a predictive recommendation model.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Pandas</span>
+                                <span class="tech-tag">Tableau</span>
+                                <span class="tech-tag">Machine Learning</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <article class="project-card" data-tilt>
+                        <div class="project-header">
+                            <h3>NBA Draft Analytics Dashboard</h3>
+                        </div>
+                        <div class="project-content">
+                            <p>To succeed in a competitive environment, you need to find value where others don't. I analyzed over a decade of draft data to quantify the ROI of draft positions, creating a practical tool to support decision-making.</p>
+                            <div class="tech-stack">
+                                <span class="tech-tag">R</span>
+                                <span class="tech-tag">SQL</span>
+                                <span class="tech-tag">Looker</span>
+                                <span class="tech-tag">Statistical Modeling</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-copyright">© 2025 Dishant Budhi</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
