@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page-wrapper">
         <div class="dynamic-bg">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
+            <div class="bg-block block-1"></div>
+            <div class="bg-block block-2"></div>
+            <div class="bg-block block-3"></div>
         </div>
 
         <nav class="navbar">
@@ -29,14 +30,13 @@
                     <a href="contact.html" data-text="Contact">Contact</a>
                 </div>
                 <button class="nav-toggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
+                    <span class="nav-toggle-icon"></span>
                 </button>
             </div>
         </nav>
 
         <main class="container">
-            <section class="about-hero">
+            <section class="hero-section">
                 <h1 class="hero-title">
                     <span class="word">A</span>
                     <span class="word">Proven</span>
@@ -47,34 +47,28 @@
                 </p>
             </section>
 
-            <section class="experience-section">
-                <h2 class="section-title">Professional Experience</h2>
+            <section class="cards-section">
+                <h2 class="section-title scroll-animate">Professional Experience</h2>
                 
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="experience-card">
-                            <h3>Product Manager, Student Association</h3>
-                            <span class="company-tag">Harvard Business School | CO-OP · July - Dec 2024</span>
-                            <ul>
-                                <li><strong>Drove record revenue:</strong> Generated $200K in 4 months, achieving the annual goal ahead of schedule and setting a new organizational benchmark.</li>
-                                <li><strong>Optimized team performance:</strong> Authored 27 new SOPs that cut employee training time by 50%, enabling faster onboarding and higher performance.</li>
-                                <li><strong>Executed complex launches:</strong> Managed stakeholders across legal, accounting, and licensing to ensure compliant HBS merchandise launches.</li>
-                            </ul>
-                        </div>
+                <div class="cards-grid">
+                    <div class="feature-card scroll-animate">
+                        <h3>Product Manager, Student Association</h3>
+                        <p class="company-tag">Harvard Business School | CO-OP · July - Dec 2024</p>
+                        <ul>
+                            <li><strong>Drove record revenue:</strong> Generated $200K in 4 months, achieving the annual goal ahead of schedule.</li>
+                            <li><strong>Optimized team performance:</strong> Authored 27 new SOPs that cut employee training time by 50%.</li>
+                            <li><strong>Executed complex launches:</strong> Managed stakeholders across legal, accounting, and licensing.</li>
+                        </ul>
                     </div>
                     
-                    <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="experience-card">
-                            <h3>Product Manager (Intern)</h3>
-                            <span class="company-tag">Habits Inc. | Internship · Feb - June 2024</span>
-                            <ul>
-                                <li><strong>Accelerated product delivery:</strong> Reduced project delivery timelines by 30% by implementing a rigorous Scrum framework.</li>
-                                <li><strong>Increased planning efficiency:</strong> Drove a 40% improvement in sprint planning accuracy through detailed pre-sprint analysis in Figma.</li>
-                                <li><strong>Reduced operational costs:</strong> Led a zero-downtime AWS migration that cut monthly cloud infrastructure expenses by 25%.</li>
-                            </ul>
-                        </div>
+                    <div class="feature-card scroll-animate">
+                        <h3>Product Manager (Intern)</h3>
+                        <p class="company-tag">Habits Inc. | Internship · Feb - June 2024</p>
+                        <ul>
+                            <li><strong>Accelerated product delivery:</strong> Reduced project delivery timelines by 30% by implementing a rigorous Scrum framework.</li>
+                            <li><strong>Increased planning efficiency:</strong> Drove a 40% improvement in sprint planning accuracy through detailed pre-sprint analysis.</li>
+                            <li><strong>Reduced operational costs:</strong> Led a zero-downtime AWS migration that cut monthly cloud infrastructure expenses by 25%.</li>
+                        </ul>
                     </div>
                 </div>
             </section>

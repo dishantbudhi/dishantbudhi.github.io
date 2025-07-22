@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="page-wrapper">
         <div class="dynamic-bg">
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
+            <div class="bg-block block-1"></div>
+            <div class="bg-block block-2"></div>
+            <div class="bg-block block-3"></div>
         </div>
 
         <nav class="navbar">
@@ -29,14 +30,13 @@
                     <a href="contact.html" data-text="Contact">Contact</a>
                 </div>
                 <button class="nav-toggle" aria-label="Toggle navigation">
-                    <span></span>
-                    <span></span>
+                    <span class="nav-toggle-icon"></span>
                 </button>
             </div>
         </nav>
 
         <main class="container">
-            <section class="about-hero">
+            <section class="hero-section">
                 <h1 class="hero-title">
                     <span class="word">Analytics</span>
                     <span class="word">in</span>
@@ -47,36 +47,36 @@
                 </p>
             </section>
 
-            <section class="projects-section">
-                <h2 class="section-title">Case Studies</h2>
+            <section class="cards-section">
+                <h2 class="section-title scroll-animate">Case Studies</h2>
                 
                 <div class="projects-grid">
-                    <article class="project-card" data-tilt>
+                    <article class="project-card scroll-animate">
                         <div class="project-header">
                             <h3>Spotify Listening Trends Dashboard</h3>
                         </div>
                         <div class="project-content">
-                            <p>This project was an exercise in finding meaningful patterns in a large dataset. I analyzed 12 months of streaming data, segmented user habits, and developed a predictive recommendation model.</p>
+                            <p>This project was an exercise in finding meaningful patterns in a large dataset. I analyzed 12 months of streaming data and developed a predictive recommendation model.</p>
                             <div class="tech-stack">
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">Pandas</span>
                                 <span class="tech-tag">Tableau</span>
-                                <span class="tech-tag">Machine Learning</span>
+                                <span class="tech-tag">ML</span>
                             </div>
                         </div>
                     </article>
                     
-                    <article class="project-card" data-tilt>
+                    <article class="project-card scroll-animate">
                         <div class="project-header">
                             <h3>NBA Draft Analytics Dashboard</h3>
                         </div>
                         <div class="project-content">
-                            <p>To succeed in a competitive environment, you need to find value where others don't. I analyzed over a decade of draft data to quantify the ROI of draft positions, creating a practical tool to support decision-making.</p>
+                            <p>To succeed in a competitive environment, you need to find value where others don't. I analyzed over a decade of draft data to quantify the ROI of draft positions.</p>
                             <div class="tech-stack">
                                 <span class="tech-tag">R</span>
                                 <span class="tech-tag">SQL</span>
                                 <span class="tech-tag">Looker</span>
-                                <span class="tech-tag">Statistical Modeling</span>
+                                <span class="tech-tag">Statistics</span>
                             </div>
                         </div>
                     </article>
