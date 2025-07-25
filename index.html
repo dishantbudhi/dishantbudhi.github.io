@@ -3,98 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dishant Budhi | Product Manager & Analyst</title>
+    <title>Dishant Budhi</title>
     <link rel="icon" type="image/png" href="images/minilogo.png">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="preloader">
-        <div class="loader"></div>
-    </div>
-
-    <div class="page-wrapper">
-        <div class="dynamic-bg">
-            <div class="bg-block block-1"></div>
-            <div class="bg-block block-2"></div>
-            <div class="bg-block block-3"></div>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="name">Dishant Budhi</h1>
+            <div class="location">Boston, MA</div>
         </div>
+    </header>
 
-        <header class="navbar">
-            <div class="nav-container">
-                <a href="./" class="logo" data-text="dB">
-                    <img src="images/logo.png" alt="dB Logo">
+    <main class="main-content">
+        <section class="intro-section">
+            <div class="section-label">ABOUT</div>
+            <p class="intro-text">
+                I build thoughtful, high-impact products at the intersection of tech and 
+                business. <br> I'm pursuing a combined B.S. in Computer Science and Business 
+                Administration at Northeastern, which helps me bridge both worlds—combining 
+                technical depth with strategic insight. I'm drawn to messy, ambiguous problems 
+                and use data, design, and systems thinking to solve them. Outside of work, 
+                I explore personal projects in data analysis and predictive modeling. 
+                Got something interesting? <a href="mailto:budhi.d@northeastern.edu" class="inline-link">Let's connect</a>.
+            </p>
+        </section>
+
+        <section class="experience-section">
+            <div class="experience-grid">
+                <div class="grid-header">
+                    <div class="section-label">WORK</div>
+                    <div></div>
+                    <div class="section-label">DESCRIPTION</div>
+                </div>
+                
+                <div class="experience-item">
+                    <div class="company">
+                        <div class="company-name">Harvard Business School</div>
+                        <div class="company-role">Product Manager, Student Association (Co-Op)</div>
+                        <div class="date-range">JUL 2024 - DEC 2024</div>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="description">
+                        Generated $200K revenue in 4 months, setting organizational 
+                        record. Authored 27 SOPs reducing training time by 50%. Led stakeholder management 
+                        for timely launch of new initiatives.
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="company">
+                        <div class="company-name">Habits Inc.</div>
+                        <div class="company-role">Product Manager (Intern)</div>
+                        <div class="date-range">FEB 2024 - JUN 2024</div>
+                    </div>
+                    <div class="spacer"></div>
+                    <div class="description">
+                        Reduced project delivery timelines by 30% with Scrum 
+                        framework. Improved sprint planning accuracy by 40%. Led zero-downtime AWS 
+                        migration, cutting monthly costs by 25%.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects-section">
+            <div class="projects-header">
+                <div class="section-label">PROJECTS</div>
+            </div>
+            <div class="projects-grid">
+                <a href="https://github.com/dishantbudhi" target="_blank" class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="project-icon">📊</span>
+                        </div>
+                        <div class="project-label">SPOTIFY TRENDS</div>
+                    </div>
+                    <div class="project-meta">
+                        <div class="project-type">DATA ANALYSIS</div>
+                    </div>
                 </a>
-                <nav class="nav-links">
-                    <a href="about/" data-text="About">About</a>
-                    <a href="experience/" data-text="Experience">Experience</a>
-                    <a href="projects/" data-text="Projects">Projects</a>
-                    <a href="contact/" data-text="Contact">Contact</a>
-                </nav>
-                <button class="nav-toggle" aria-label="Toggle navigation">
-                    <span class="nav-toggle-icon"></span>
-                </button>
-            </div>
-        </header>
-
-        <main class="container">
-            <section class="hero-section">
-                <div class="hero-content animate-fade-in-up">
-                    <h1 class="hero-title">
-                        <span class="word">Strategy</span>
-                        <span class="word">Meets</span>
-                        <span class="word accent">Execution.</span>
-                    </h1>
-                    <p class="hero-description">
-                        I build impactful products by blending deep technical knowledge with a sharp business acumen. As a Computer Science and Business student at Northeastern, I thrive at the intersection of data, strategy, and user-centered design.
-                    </p>
-                    <a href="projects/" class="cta-button">
-                        <span class="button-text">View My Work</span>
-                        <span class="button-icon">→</span>
-                    </a>
-                </div>
-            </section>
-
-            <section class="welcome-section scroll-animate">
-                <div class="welcome-grid">
-                    <div class="welcome-image">
-                        <img src="images/pic1.png" alt="Dishant Budhi">
+                <a href="https://github.com/dishantbudhi" target="_blank" class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <span class="project-icon">🏀</span>
+                        </div>
+                        <div class="project-label">NBA ANALYTICS</div>
                     </div>
-                    <div class="welcome-content">
-                        <h2 class="section-title">Welcome.</h2>
-                        <p>I'm a product manager and analyst driven by a passion for solving complex problems. I believe the best products are born from a deep understanding of user needs and a relentless focus on delivering value. My goal is to not just build products that work, but to build products that matter.</p>
-                        <p>My approach is rooted in a disciplined, data-informed process. I excel at translating raw data into actionable insights, and I have a proven track record of leading projects from concept to launch.</p>
-                        <a href="about/" class="text-link">More About Me →</a>
+                    <div class="project-meta">
+                        <div class="project-type">PREDICTIVE MODELING</div>
                     </div>
-                </div>
-            </section>
-
-            <section class="cards-section scroll-animate" data-stagger-children>
-                <h2 class="section-title">My Approach</h2>
-                <div class="cards-grid">
-                    <article class="feature-card">
-                        <div class="card-number">01</div>
-                        <h3>Data-Informed Strategy</h3>
-                        <p>I believe the best decisions are guided by evidence. My work begins with a deep dive into the data to uncover insights that lead to effective, sustainable strategies. This analytical foundation allows me to identify opportunities, mitigate risks, and build products that are set up for success from day one.</p>
-                    </article>
-                    <article class="feature-card">
-                        <div class="card-number">02</div>
-                        <h3>Disciplined Execution</h3>
-                        <p>A plan is only as good as its implementation. I have a track record of seeing projects through from start to finish, ensuring goals are met on time and to a high standard. I am adept at managing stakeholders, navigating complex requirements, and fostering a collaborative environment to ensure a seamless execution.</p>
-                    </article>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="footer-content">
-                <p class="footer-copyright">© 2025 Dishant Budhi</p>
+                </a>
             </div>
-        </footer>
-    </div>
+        </section>
+    </main>
 
-    <script src="js/script.js"></script>
+    <!-- Footer will be loaded here -->
+    <div id="footer-container"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
