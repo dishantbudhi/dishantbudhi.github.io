@@ -15,6 +15,12 @@
     --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
     --max-width: 1100px;
+    
+    /* === ADDED: Consistent Spacing Variables === */
+    --spacing-section-bottom: 5rem;
+    --spacing-section-bottom-mobile: 4rem;
+    --spacing-header-bottom: 1.5rem;
+    --spacing-content-gap: 1.5rem;
 }
 
 html {
@@ -103,7 +109,7 @@ a {
 }
 
 .intro-section {
-    margin-bottom: 5rem;
+    margin-bottom: var(--spacing-section-bottom); /* UPDATED */
     display: grid;
     grid-template-columns: 80px 1fr;
     gap: 3rem;
@@ -134,7 +140,7 @@ a {
 }
 
 .experience-section {
-    margin-bottom: 5rem;
+    margin-bottom: var(--spacing-section-bottom); /* UPDATED */
 }
 
 .experience-grid {
@@ -146,7 +152,7 @@ a {
     display: grid;
     grid-template-columns: 350px 40px 1fr;
     gap: 0;
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-header-bottom); /* UPDATED */
     padding-bottom: 0.75rem;
     border-bottom: 1px solid var(--border);
 }
@@ -155,7 +161,7 @@ a {
     display: grid;
     grid-template-columns: 350px 40px 1fr;
     gap: 0;
-    padding: 1rem 0;
+    padding: var(--spacing-content-gap) 0; /* UPDATED */
     border-bottom: 1px solid var(--border);
 }
 
@@ -195,11 +201,11 @@ a {
 }
 
 .projects-section {
-    margin-bottom: 5rem;
+    margin-bottom: var(--spacing-section-bottom); /* UPDATED */
 }
 
 .projects-header {
-    margin-bottom: 1rem;
+    margin-bottom: var(--spacing-header-bottom); /* UPDATED */
     padding-bottom: 0.75rem;
     border-bottom: 1px solid var(--border);
 }
@@ -207,7 +213,7 @@ a {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 340px));
-    gap: 1.25rem;
+    gap: var(--spacing-content-gap); /* UPDATED */
     justify-content: start;
 }
 
@@ -382,27 +388,34 @@ a {
     .intro-section,
     .experience-section,
     .projects-section {
-        margin-bottom: 4rem;
+        margin-bottom: var(--spacing-section-bottom-mobile); /* UPDATED */
     }
     
     .intro-section {
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: var(--spacing-header-bottom); /* UPDATED */
+    }
+    
+    /* === REFINED: Unified section header styling === */
+    .intro-section .section-label,
+    .grid-header,
+    .projects-header {
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 1rem;
+        margin-bottom: var(--spacing-header-bottom); /* UPDATED */
     }
     
     .intro-section .section-label,
     .experience-section .section-label,
     .projects-header .section-label {
         margin-top: 0;
-        margin-bottom: 0.75rem;
+        margin-bottom: 0; /* Let the container handle margin */
         display: block;
     }
     
     .grid-header {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 1.5rem;
-        padding-bottom: 1rem;
     }
     
     .grid-header .spacer,
@@ -413,7 +426,7 @@ a {
     .experience-item {
         grid-template-columns: 1fr;
         gap: 1rem;
-        padding: 1.5rem 0;
+        padding: var(--spacing-content-gap) 0; /* UPDATED */
     }
     
     .company {
@@ -427,6 +440,7 @@ a {
     
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: var(--spacing-content-gap); /* UPDATED */
     }
     
     .footer {
