@@ -379,22 +379,23 @@ a {
         padding: 1rem 1.5rem 2rem;
     }
     
+    .intro-section,
+    .experience-section,
+    .projects-section {
+        margin-bottom: 4rem;
+    }
+    
     .intro-section {
         grid-template-columns: 1fr;
         gap: 1rem;
-        margin-bottom: 3.5rem;
     }
     
-    .intro-section .section-label {
+    .intro-section .section-label,
+    .experience-section .section-label,
+    .projects-header .section-label {
         margin-top: 0;
         margin-bottom: 0.75rem;
         display: block;
-    }
-    
-    .experience-section .section-label,
-    .projects-header .section-label {
-        display: block;
-        margin-bottom: 0.5rem;
     }
     
     .grid-header {
@@ -411,14 +412,8 @@ a {
     
     .experience-item {
         grid-template-columns: 1fr;
-        gap: 0.5rem;
-    }
-    
-    .experience-item {
-        padding: 1.5rem 0;
-        display: grid;
-        grid-template-columns: 1fr;
         gap: 1rem;
+        padding: 1.5rem 0;
     }
     
     .company {
@@ -426,8 +421,8 @@ a {
     }
     
     .description {
-        padding-top: 0.5rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 0;
+        border-top: none;
     }
     
     .projects-grid {
