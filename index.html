@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Dishant Budhi - Product Manager & Developer. Building thoughtful, high-impact products at the intersection of technology and business.">
     <meta name="theme-color" content="#0a0a0a">
     
     <title>Dishant Budhi</title>
     
-    <link rel="icon" type="image/png" href="images/minilogo.png">
-    <link rel="apple-touch-icon" href="images/minilogo.png">
+    <link rel="icon" type="image/png" href="files/minilogo.png">
+    <link rel="apple-touch-icon" href="files/minilogo.png">
     
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,11 +16,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="tsparticles"></div>
+    <canvas id="particles-bg"></canvas>
 
     <header class="header">
         <div class="header-content">
-            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
+            <a href="https://youtu.be/dw71OjiNga8?si=V02-6BYZamsebko0" target="_blank" rel="noopener noreferrer" aria-label="Easter egg link">
                 <img src="files/weblogo.png" alt="Dishant Budhi logo" class="logo">
             </a>
             <div class="location" aria-label="Location">Boston, MA</div>
@@ -38,9 +37,8 @@
                     I'm drawn to solving messy, ambiguous problems through data, design, and systems thinking. 
                     Outside of work, I explore personal projects in data analysis and predictive modeling.
                 </p>
-                <p><br></p>
-                <p class="intro-text">
-                    Got something interesting? <a href="mailto:budhi.d@northeastern.edu" class="inline-link">Let's connect</a>.
+                <p class="intro-text" style="margin-top: 1.5rem;">
+                    Got something interesting? <strong><a href="mailto:budhi.d@northeastern.edu" class="inline-link">Let's connect</a></strong>.
                 </p>
             </div>
         </section>
@@ -49,7 +47,7 @@
             <div class="experience-grid">
                 <div class="grid-header">
                     <h2 id="work-label" class="section-label">WORK</h2>
-                    <div class="spacer"></div>
+                    <div class="spacer" aria-hidden="true"></div>
                     <div class="section-label">DESCRIPTION</div>
                 </div>
                 
@@ -59,7 +57,7 @@
                         <div class="company-role">Product Manager, Student Association (Co-Op)</div>
                         <time class="date-range">JUL 2024 - DEC 2024</time>
                     </div>
-                    <div class="spacer"></div>
+                    <div class="spacer" aria-hidden="true"></div>
                     <div class="description">
                         Generated $200K revenue in 4 months, setting organizational 
                         record. Authored 27 SOPs reducing training time by 50%. Led stakeholder management 
@@ -73,7 +71,7 @@
                         <div class="company-role">Product Manager (Intern)</div>
                         <time class="date-range">FEB 2024 - JUN 2024</time>
                     </div>
-                    <div class="spacer"></div>
+                    <div class="spacer" aria-hidden="true"></div>
                     <div class="description">
                         Reduced project delivery timelines by 30% with Scrum 
                         framework. Improved sprint planning accuracy by 40%. Led zero-downtime AWS 
@@ -116,7 +114,6 @@
 
     <div id="footer-container"></div>
 
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@3/tsparticles.bundle.min.js"></script>
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 </html>
