@@ -5,6 +5,7 @@ async function loadFooter() {
         if (!response.ok) throw new Error('Footer failed to load');
         const data = await response.text();
         document.getElementById('footer-container').innerHTML = data;
+        await setLastUpdatedDate(); // Call after footer is loaded
     } catch (error) {
         console.error('Error loading footer:', error);
         // Fallback footer content
@@ -17,6 +18,35 @@ async function loadFooter() {
                 </div>
             </footer>
         `;
+    }
+}
+
+// Fetches the last commit date from GitHub and updates the footer
+async function setLastUpdatedDate() {
+    const dateElement = document.getElementById('last-updated');
+    if (!dateElement) return;
+
+    try {
+        // Fetch the latest commit from your repository
+        const response = await fetch('https://api.github.com/repos/dishantbudhi/dishantbudhi.github.io/commits?per_page=1');
+        if (!response.ok) throw new Error('Failed to fetch last commit date from GitHub');
+        
+        const data = await response.json();
+        const lastCommitDate = new Date(data[0].commit.committer.date);
+        
+        const year = lastCommitDate.getFullYear();
+        const month = String(lastCommitDate.getMonth() + 1).padStart(2, '0');
+        const day = String(lastCommitDate.getDate()).padStart(2, '0');
+        
+        dateElement.textContent = `LAST UPDATED ${year}-${month}-${day}`;
+    } catch (error) {
+        console.error('Error fetching last updated date:', error);
+        // Fallback to today's date if the API call fails
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const day = String(today.getDate()).padStart(2, '0');
+        dateElement.textContent = `LAST UPDATED ${year}-${month}-${day}`;
     }
 }
 

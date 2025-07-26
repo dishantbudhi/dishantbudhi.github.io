@@ -49,14 +49,12 @@ a {
 .header-content {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
     gap: 1rem;
 }
 
-.name {
-    font-size: 1rem;
-    font-weight: 400;
-    letter-spacing: -0.01em;
+.logo {
+    height: 1rem; /* Adjusted logo height */
 }
 
 .location {
@@ -354,8 +352,8 @@ a {
 /* Responsive */
 @media (max-width: 768px) {
     .header-content {
-        flex-direction: column;
-        align-items: flex-start;
+        justify-content: space-between;
+        align-items: center;
     }
     
     .intro-section {
@@ -392,6 +390,11 @@ a {
     
     .footer-content {
         flex-direction: column;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
     }
     
     .footer-right {
