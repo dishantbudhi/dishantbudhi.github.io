@@ -2,9 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Dishant Budhi - Product Manager & Developer. Building thoughtful, high-impact products at the intersection of technology and business.">
+    <meta name="theme-color" content="#0a0a0a">
+    
     <title>Dishant Budhi</title>
+    
     <link rel="icon" type="image/png" href="images/minilogo.png">
+    <link rel="apple-touch-icon" href="images/minilogo.png">
+    
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,36 +20,40 @@
     <header class="header">
         <div class="header-content">
             <h1 class="name">Dishant Budhi</h1>
-            <div class="location">Boston, MA</div>
+            <div class="location" aria-label="Location">Boston, MA</div>
         </div>
     </header>
 
     <main class="main-content">
-        <section class="intro-section">
-            <div class="section-label">ABOUT</div>
-            <p class="intro-text">
-                I'm driven to help build thoughtful, high-impact products at the intersection of technology and business.
-                As a combined B.S. candidate in Computer Science and Business Administration at Northeastern, 
-                I’m drawn to solving messy, ambiguous problems through data, design, and systems thinking. 
-                Outside of work, I explore personal projects in data analysis and predictive modeling. <br>
-                
-                <br> Got something interesting? <a href="mailto:budhi.d@northeastern.edu" class="inline-link">Let's connect</a>.
-            </p>
+        <section class="intro-section" aria-labelledby="about-label">
+            <h2 id="about-label" class="section-label">ABOUT</h2>
+            <div class="intro-content">
+                <p class="intro-text">
+                    I'm driven to help build thoughtful, high-impact products at the intersection of technology and business.
+                    As a combined B.S. candidate in Computer Science and Business Administration at Northeastern, 
+                    I'm drawn to solving messy, ambiguous problems through data, design, and systems thinking. 
+                    Outside of work, I explore personal projects in data analysis and predictive modeling.
+                </p>
+                <p><br></p>
+                <p class="intro-text">
+                    Got something interesting? <a href="mailto:budhi.d@northeastern.edu" class="inline-link">Let's connect</a>.
+                </p>
+            </div>
         </section>
 
-        <section class="experience-section">
+        <section class="experience-section" aria-labelledby="work-label">
             <div class="experience-grid">
                 <div class="grid-header">
-                    <div class="section-label">WORK</div>
-                    <div></div>
+                    <h2 id="work-label" class="section-label">WORK</h2>
+                    <div class="spacer"></div>
                     <div class="section-label">DESCRIPTION</div>
                 </div>
                 
-                <div class="experience-item">
+                <article class="experience-item">
                     <div class="company">
-                        <div class="company-name">Harvard Business School</div>
+                        <h3 class="company-name">Harvard Business School</h3>
                         <div class="company-role">Product Manager, Student Association (Co-Op)</div>
-                        <div class="date-range">JUL 2024 - DEC 2024</div>
+                        <time class="date-range">JUL 2024 - DEC 2024</time>
                     </div>
                     <div class="spacer"></div>
                     <div class="description">
@@ -51,13 +61,13 @@
                         record. Authored 27 SOPs reducing training time by 50%. Led stakeholder management 
                         for timely launch of new initiatives.
                     </div>
-                </div>
+                </article>
 
-                <div class="experience-item">
+                <article class="experience-item">
                     <div class="company">
-                        <div class="company-name">Habits Inc.</div>
+                        <h3 class="company-name">Habits Inc.</h3>
                         <div class="company-role">Product Manager (Intern)</div>
-                        <div class="date-range">FEB 2024 - JUN 2024</div>
+                        <time class="date-range">FEB 2024 - JUN 2024</time>
                     </div>
                     <div class="spacer"></div>
                     <div class="description">
@@ -65,19 +75,19 @@
                         framework. Improved sprint planning accuracy by 40%. Led zero-downtime AWS 
                         migration, cutting monthly costs by 25%.
                     </div>
-                </div>
+                </article>
             </div>
         </section>
 
-        <section class="projects-section">
+        <section class="projects-section" aria-labelledby="projects-label">
             <div class="projects-header">
-                <div class="section-label">PROJECTS</div>
+                <h2 id="projects-label" class="section-label">PROJECTS</h2>
             </div>
             <div class="projects-grid">
-                <a href="https://github.com/dishantbudhi" target="_blank" class="project-card">
+                <a href="https://github.com/dishantbudhi" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Spotify Trends - Data Analysis Project">
                     <div class="project-image">
                         <div class="project-placeholder">
-                            <span class="project-icon">📊</span>
+                            <span class="project-icon" aria-hidden="true">📊</span>
                         </div>
                         <div class="project-label">SPOTIFY TRENDS</div>
                     </div>
@@ -85,10 +95,10 @@
                         <div class="project-type">DATA ANALYSIS</div>
                     </div>
                 </a>
-                <a href="https://github.com/dishantbudhi" target="_blank" class="project-card">
+                <a href="https://github.com/dishantbudhi" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="NBA Analytics - Predictive Modeling Project">
                     <div class="project-image">
                         <div class="project-placeholder">
-                            <span class="project-icon">🏀</span>
+                            <span class="project-icon" aria-hidden="true">🏀</span>
                         </div>
                         <div class="project-label">NBA ANALYTICS</div>
                     </div>
@@ -103,6 +113,6 @@
     <!-- Footer will be loaded here -->
     <div id="footer-container"></div>
 
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

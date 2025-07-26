@@ -1,20 +1,30 @@
-<footer class="footer">
+<footer class="footer" role="contentinfo">
     <div class="footer-content">
         <div class="footer-left">
-            <span class="version">v1.0.0</span>
-            <span class="update-date">LAST UPDATED 2025-07-25</span>
+            <span class="version" aria-label="Version">v1.0.0</span>
+            <span class="update-date" aria-label="Last updated">LAST UPDATED 2025-07-25</span>
         </div>
         
-        <div class="footer-links">
-            <a href="https://github.com/dishantbudhi" class="footer-link">GitHub<sup>↗</sup></a>
-            <a href="https://www.linkedin.com/in/dishantbudhi" class="footer-link">LinkedIn<sup>↗</sup></a>
-            <a href="https://calendly.com/dbudhi" class="footer-link">Calendly<sup>↗</sup></a>
-            <a href="files/resume.pdf" class="footer-link">Resume<sup>↓</sup></a>
-        </div>
+        <nav class="footer-links" aria-label="External links">
+            <a href="https://github.com/dishantbudhi" class="footer-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                GitHub<sup aria-hidden="true">↗</sup>
+            </a>
+            <a href="https://www.linkedin.com/in/dishantbudhi" class="footer-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                LinkedIn<sup aria-hidden="true">↗</sup>
+            </a>
+            <a href="https://calendly.com/dbudhi" class="footer-link" target="_blank" rel="noopener noreferrer" aria-label="Schedule a meeting">
+                Calendly<sup aria-hidden="true">↗</sup>
+            </a>
+            <a href="files/resume.docx" class="footer-link" download aria-label="Download resume">
+                Resume<sup aria-hidden="true">↓</sup>
+            </a>
+        </nav>
         
         <div class="footer-right">
             <div class="footer-tagline">Let's build something together.</div>
-            <a href="mailto:budhi.d@northeastern.edu" class="footer-email">budhi.d@northeastern.edu<sup>↗</sup></a>
+            <a href="mailto:budhi.d@northeastern.edu" class="footer-email" aria-label="Email contact">
+                budhi.d@northeastern.edu<sup aria-hidden="true">↗</sup>
+            </a>
         </div>
     </div>
 </footer>
