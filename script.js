@@ -17,7 +17,7 @@ class ParticleSystem {
         this.animationId = null;
         
         this.config = {
-            particleCount: 150,
+            particleCount: this.getParticleCount(),
             particleSpeed: 0.4,
             connectionDistance: 150,
             mouseRepelDistance: 120,
@@ -29,6 +29,10 @@ class ParticleSystem {
         this.init();
     }
     
+    getParticleCount() {
+        return window.innerWidth < 768 ? 50 : 150;
+    }
+
     init() {
         this.resizeCanvas();
         this.createParticles();
@@ -69,6 +73,7 @@ class ParticleSystem {
         
         window.addEventListener('resize', () => {
             this.resizeCanvas();
+            this.config.particleCount = this.getParticleCount();
             this.createParticles();
         });
     }
