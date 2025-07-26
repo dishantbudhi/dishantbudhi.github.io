@@ -1,3 +1,62 @@
+// Function to initialize tsParticles (Corrected)
+async function loadParticles(id, options) {
+    await tsParticles.load(id, options);
+}
+
+// Configuration for the particle animation
+const particlesConfig = {
+    fpsLimit: 60,
+    particles: {
+        color: { value: "#ffffff" },
+        links: {
+            color: "#ffffff",
+            distance: 150,
+            enable: true,
+            opacity: 0.4,
+            width: 1,
+        },
+        move: {
+            direction: "none",
+            enable: true,
+            outModes: "out",
+            random: false,
+            speed: 1,
+            straight: false,
+        },
+        number: {
+            density: {
+                enable: true,
+            },
+            value: 80,
+        },
+        opacity: {
+            value: 0.5,
+        },
+        shape: {
+            type: "circle",
+        },
+        size: {
+            value: { min: 1, max: 3 },
+        },
+    },
+    interactivity: {
+        detectsOn: "window", // THIS IS THE FIX
+        events: {
+            onHover: {
+                enable: true,
+                mode: "repulse",
+            },
+        },
+        modes: {
+            repulse: {
+                distance: 100,
+                duration: 0.4,
+            },
+        },
+    },
+    detectRetina: true,
+};
+
 // Load footer with error handling
 async function loadFooter() {
     try {
@@ -52,6 +111,8 @@ async function setLastUpdatedDate() {
 
 // Initialize when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
+    // Correctly call the loadParticles function
+    loadParticles("tsparticles", particlesConfig);
     loadFooter();
     
     // Add subtle hover effects to project cards (desktop only)
