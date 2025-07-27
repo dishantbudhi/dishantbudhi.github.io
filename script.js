@@ -6,13 +6,10 @@ const Config = {
         count: window.innerWidth < 768 ? 60 : 120,
         speed: 0.2,
         connectionDistance: 220,
-        mouseRepelDistance: 120,
-        mouseRepelForce: 0.05,
         friction: 0.995,
         margin: 150,
     },
     performance: {
-        scrollPauseDelay: 150,
         targetFPS: 60,
     },
     animation: {
@@ -33,7 +30,7 @@ class Particle {
         this.config = config;
     }
 
-    update(bounds, mouse) {
+    update(bounds) {
         this.x += this.vx;
         this.y += this.vy;
 
@@ -47,19 +44,10 @@ class Particle {
         if (this.y < -this.config.margin) this.y = bounds.height + this.config.margin;
         if (this.y > bounds.height + this.config.margin) this.y = -this.config.margin;
 
-        // Mouse repulsion
-        if (mouse.x !== null) {
-            const dx = this.x - mouse.x;
-            const dy = this.y - mouse.y;
-            const distSq = dx * dx + dy * dy;
-            
-            if (distSq < this.config.mouseRepelDistance ** 2) {
-                const distance = Math.sqrt(distSq);
-                const force = (this.config.mouseRepelDistance - distance) / this.config.mouseRepelDistance;
-                const angle = Math.atan2(dy, dx);
-                this.vx += Math.cos(angle) * force * this.config.mouseRepelForce;
-                this.vy += Math.sin(angle) * force * this.config.mouseRepelForce;
-            }
+        // Add small random force to keep particles moving
+        if (Math.abs(this.vx) < 0.01 && Math.abs(this.vy) < 0.01) {
+            this.vx += (Math.random() - 0.5) * 0.1;
+            this.vy += (Math.random() - 0.5) * 0.1;
         }
     }
 }
@@ -70,10 +58,7 @@ class ParticleSystem {
         this.ctx = this.canvas.getContext('2d');
         this.config = config;
         this.particles = [];
-        this.mouse = { x: null, y: null };
         this.animationId = null;
-        this.isPaused = false;
-        this.scrollTimeout = null;
         this.lastFrameTime = 0;
         this.frameInterval = 1000 / Config.performance.targetFPS;
 
@@ -113,21 +98,8 @@ class ParticleSystem {
     }
 
     bindEvents() {
-        window.addEventListener('mousemove', this.handleMouseMove.bind(this), { passive: true });
-        window.addEventListener('mouseout', this.handleMouseOut.bind(this));
-        // This event listener handles window resizing to ensure the background scales.
+        // Only handle window resizing
         window.addEventListener('resize', this.debounce(this.handleResize.bind(this), 250));
-        window.addEventListener('scroll', this.handleScroll.bind(this), { passive: true });
-    }
-
-    handleMouseMove(e) {
-        this.mouse.x = e.clientX;
-        this.mouse.y = e.clientY;
-    }
-
-    handleMouseOut() {
-        this.mouse.x = null;
-        this.mouse.y = null;
     }
     
     // This function is called when the window is resized.
@@ -135,15 +107,6 @@ class ParticleSystem {
         // It re-calculates the canvas size and re-draws the particles.
         this.setupCanvas();
         this.createParticles();
-    }
-
-    handleScroll() {
-        this.isPaused = true;
-        clearTimeout(this.scrollTimeout);
-        this.scrollTimeout = setTimeout(() => {
-            this.isPaused = false;
-            if (!this.animationId) this.animate();
-        }, Config.performance.scrollPauseDelay);
     }
 
     getBounds() {
@@ -155,7 +118,7 @@ class ParticleSystem {
 
     update() {
         const bounds = this.getBounds();
-        this.particles.forEach(p => p.update(bounds, this.mouse));
+        this.particles.forEach(p => p.update(bounds));
     }
     
     draw() {
@@ -183,11 +146,6 @@ class ParticleSystem {
     }
 
     animate(timestamp = 0) {
-        if (this.isPaused) {
-            this.animationId = null;
-            return;
-        }
-
         const deltaTime = timestamp - this.lastFrameTime;
 
         if (deltaTime >= this.frameInterval) {
