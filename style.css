@@ -220,7 +220,7 @@ a {
 .experience-header {
     display: flex;
     flex-direction: column;
-    text-align: right;
+    text-align: left; /* Left-aligned on mobile */
     justify-content: flex-start;
     line-height: 1.4;
 }
@@ -248,7 +248,7 @@ a {
 }
 
 .experience-description {
-    margin-top: 0.5rem;
+    margin-top: 1rem; /* Increased from 0.5rem for better mobile spacing */
 }
 
 .experience-description .text-description {
@@ -372,7 +372,7 @@ a {
     }
 
     .experience-header {
-        text-align: right;
+        text-align: right; /* Right-aligned only on desktop */
         padding-right: 0; /* Ensure proper alignment */
     }
 
