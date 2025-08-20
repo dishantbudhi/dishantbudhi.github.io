@@ -1,109 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#0a0a0a">
-    
-    <title>Dishant Budhi</title>
-    
-    <link rel="icon" type="image/png" href="files/minilogo.png">
-    <link rel="apple-touch-icon" href="files/minilogo.png">
-    
-    <link rel="stylesheet" href="style.css">
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
-</head>
-<body>
-    <canvas id="particles-bg"></canvas>
-
-    <div class="content-wrapper">
-        <header class="header">
-            <div class="header-content">
-                <a href="#" aria-label="Home" class="logo-link">
-                    <img src="files/weblogo.png" alt="Dishant Budhi logo" class="logo">
-                </a>
-                <div class="header-text">
-                    <div class="name"><strong>Dishant Budhi</strong></div>
-                    <div class="location" aria-label="Location">Boston, MA</div>
-                </div>
-            </div>
-        </header>
-
-        <main class="main-content">
-            <section class="site-section intro-section" aria-labelledby="about-label">
-                <div class="intro-hook">
-                    <p class="text-title">
-                        <strong>Learn. Build. Impact.</strong>
-                    </p>
-                </div>
-                <div class="intro-details">
-                     <h2 id="about-label" class="text-section-title">ABOUT</h2>
-                    <p class="text-description">
-                       As a B.S. candidate in Computer Science and Business Administration at Northeastern, I'm drawn to solving messy, ambiguous problems through data, design, and systems thinking. Outside of work, I explore personal projects in data analysis and predictive modeling.
-                    </p>
-                     <p class="text-description">
-                        Got something interesting? <strong><a href="mailto:budhi.d@northeastern.edu" class="inline-link">Let's connect</a></strong>.
-                    </p>
-                </div>
-            </section>
-
-            <section class="site-section experience-section" aria-labelledby="work-label">
-                <div class="section-header">
-                    <h2 id="work-label" class="text-section-title">WORK</h2>
-                </div>
-                <div class="experience-list">
-                    <article class="experience-item">
-                        <div class="experience-header">
-                            <h3 class="company-name"><strong>Harvard Business School</strong></h3>
-                            <div class="role-title">Product Manager, Student Association (Co-Op)</div>
-                            <time class="date-range">JUL 2024 – DEC 2024</time>
-                        </div>
-                        <div class="experience-description">
-                            <p class="text-description">Generated $200K revenue in 4 months, setting organizational record. Authored 27 SOPs reducing training time by 50%. Led stakeholder management for timely launch of new initiatives.</p>
-                        </div>
-                    </article>
-                    <article class="experience-item">
-                        <div class="experience-header">
-                            <h3 class="company-name"><strong>Habits Inc.</strong></h3>
-                            <div class="role-title">Product Manager (Intern)</div>
-                            <time class="date-range">FEB 2024 – JUN 2024</time>
-                        </div>
-                        <div class="experience-description">
-                            <p class="text-description">Reduced project delivery timelines by 30% with Scrum framework. Improved sprint planning accuracy by 40%. Led zero-downtime AWS migration, cutting monthly costs by 25%.</p>
-                        </div>
-                    </article>
-                </div>
-            </section>
-
-            <section class="site-section projects-section" aria-labelledby="projects-label">
-                 <div class="section-header">
-                    <h2 id="projects-label" class="text-section-title">PROJECTS</h2>
-                </div>
-                <div class="projects-grid">
-                    <a href="https://github.com/dishantbudhi" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="Spotify Trends - Data Analysis Project">
-                        <div class="project-content">
-                             <div class="text-subsection-title"><strong>SPOTIFY TRENDS</strong></div>
-                             <div class="text-description project-type">DATA ANALYSIS</div>
-                        </div>
-                         <div class="project-icon" aria-hidden="true">📊</div>
-                    </a>
-                    <a href="https://github.com/dishantbudhi" target="_blank" rel="noopener noreferrer" class="project-card" aria-label="NBA Analytics - Predictive Modeling Project">
-                        <div class="project-content">
-                            <div class="text-subsection-title"><strong>NBA ANALYTICS</strong></div>
-                            <div class="text-description project-type">PREDICTIVE MODELING</div>
-                        </div>
-                        <div class="project-icon" aria-hidden="true">🏀</div>
-                    </a>
-                </div>
-            </section>
-        </main>
-        
-        <footer id="footer-container" class="footer"></footer>
-    </div>
-
-    <script src="script.js" type="module"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/files/minilogo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dishant Budhi — Portfolio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>
