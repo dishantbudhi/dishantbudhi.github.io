@@ -1,0 +1,23 @@
+.intro {
+  padding: var(--spacing-xl) 0 var(--spacing-lg) 0;
+}
+
+.title {
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: calc(var(--spacing-lg) * 2);
+}
+
+.aboutSection {
+  margin-top: var(--spacing-md);
+}
+
+.aboutText {
+  margin: var(--spacing-md) 0 var(--spacing-md) 0;
+  color: var(--color-subtext);
+  max-width: 65ch;
+}
+
+
