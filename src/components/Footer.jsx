@@ -5,7 +5,7 @@ export default function Footer() {
     <footer className={styles.footer} id="contact">
       <div className="container">
         <div className={styles.inner}>
-          <div className={styles.version}>v4.0.0 · Last updated: August 2025</div>
+          <div className={styles.version}>v4.0.3 · Last updated: August 2025</div>
           <div className={styles.links}>
             <a href="https://github.com/dishantbudhi" target="_blank" rel="noreferrer">GitHub</a>
             <a href="https://www.linkedin.com/in/dishantbudhi" target="_blank" rel="noreferrer">LinkedIn</a>
