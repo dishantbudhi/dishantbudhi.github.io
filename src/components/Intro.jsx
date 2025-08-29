@@ -8,9 +8,10 @@ export default function Intro() {
         <div className={styles.aboutSection}>
           <div className="badge">ABOUT</div>
           <p className={styles.aboutText}>
-            As a B.S. candidate in Computer Science and Business Administration at Northeastern, I'm drawn to solving messy,
-            ambiguous problems through data, design, and systems thinking. Outside of work, I explore personal projects in data
-            analysis and predictive modeling.
+            I’m a B.S. candidate in Computer Science and Business Administration at Northeastern University, 
+            passionate about solving complex, ambiguous problems through data, design, and systems thinking. 
+            Beyond academics and work, I enjoy exploring personal projects in data analysis, predictive 
+            modeling, and technology-driven problem solving.
           </p>
           <p className="muted">
             Got something interesting? <a href="mailto:budhi.d@northeastern.edu">Let's connect</a>.
