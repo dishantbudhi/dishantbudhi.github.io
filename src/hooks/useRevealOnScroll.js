@@ -1,6 +1,9 @@
 import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 export function useRevealOnScroll() {
+  const location = useLocation()
+  
   useEffect(() => {
     const elements = Array.from(document.querySelectorAll('[data-reveal]'))
     if (elements.length === 0) return
@@ -23,7 +26,7 @@ export function useRevealOnScroll() {
     }
 
     return () => observer.disconnect()
-  }, [])
+  }, [location.pathname])
 }
 
 

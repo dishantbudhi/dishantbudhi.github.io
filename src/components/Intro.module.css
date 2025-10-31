@@ -14,10 +14,49 @@
   margin-top: var(--spacing-md);
 }
 
+.introLayout {
+  display: flex;
+  gap: var(--spacing-xl);
+  align-items: flex-start;
+  margin-top: var(--spacing-md);
+}
+
+.introContent {
+  flex: 1;
+}
+
 .aboutText {
   margin: var(--spacing-md) 0 var(--spacing-md) 0;
   color: var(--color-subtext);
   max-width: 65ch;
+}
+
+.headshotContainer {
+  flex-shrink: 0;
+}
+
+.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+  box-shadow: var(--shadow-soft);
+}
+
+@media (max-width: 768px) {
+  .introLayout {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .headshotContainer {
+    align-self: center;
+  }
+  
+  .headshot {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 

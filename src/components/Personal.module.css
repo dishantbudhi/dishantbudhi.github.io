@@ -1,0 +1,94 @@
+.personal {
+  padding: var(--spacing-xl) 0 var(--spacing-lg) 0;
+}
+
+.title {
+  font-size: clamp(28px, 5vw, 40px);
+  line-height: 1.1;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: calc(var(--spacing-lg) * 2);
+}
+
+.aboutSection {
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-xl);
+}
+
+.aboutText {
+  margin: var(--spacing-md) 0 var(--spacing-md) 0;
+  color: var(--color-subtext);
+  max-width: 65ch;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
+}
+
+.imageContainer {
+  position: sticky;
+  top: calc(var(--spacing-xl) + 20px);
+  align-self: start;
+}
+
+.interestsImage {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.interestsContent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.interestText {
+  margin: var(--spacing-md) 0 var(--spacing-sm) 0;
+  color: var(--color-subtext);
+  max-width: 65ch;
+}
+
+.interestList {
+  list-style: none;
+  padding: 0;
+  margin: var(--spacing-sm) 0 0 0;
+}
+
+.interestList li {
+  padding: var(--spacing-sm) 0;
+  color: var(--color-text);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: relative;
+  padding-left: var(--spacing-md);
+}
+
+.interestList li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+}
+
+.interestList li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .imageContainer {
+    position: static;
+  }
+  
+  .interestsImage {
+    max-width: 100%;
+  }
+}
+
