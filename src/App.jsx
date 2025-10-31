@@ -1,11 +1,11 @@
 import './styles/global.css'
 import ParticleCanvas from './components/ParticleCanvas'
 import Header from './components/Header'
-import Intro from './components/Intro'
-import Experience from './components/Experience'
-import Projects from './components/Projects'
 import Footer from './components/Footer'
 import { useRevealOnScroll } from './hooks/useRevealOnScroll'
+import { Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import PersonalPage from './pages/PersonalPage'
 
 function App() {
   useRevealOnScroll()
@@ -15,9 +15,10 @@ function App() {
       <ParticleCanvas />
       <Header />
       <main>
-        <Intro />
-        <Experience />
-        <Projects />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/personal" element={<PersonalPage />} />
+        </Routes>
       </main>
       <Footer />
     </>

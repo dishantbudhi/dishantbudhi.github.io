@@ -11,6 +11,7 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-md) 0;
+  gap: var(--spacing-md);
 }
 
 .brand {
@@ -22,6 +23,23 @@
   height: 32px;
   width: auto;
   object-fit: contain;
+}
+
+.nav {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.navLink {
+  color: var(--color-subtext);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 200ms ease;
+}
+
+.navLink:hover {
+  color: var(--color-accent);
 }
 
 .meta {
