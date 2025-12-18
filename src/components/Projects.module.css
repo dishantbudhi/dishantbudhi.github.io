@@ -1,5 +1,5 @@
 .section {
-  padding: var(--spacing-md) 0 var(--spacing-xl) 0;
+  padding: var(--spacing-xl) 0 var(--spacing-lg) 0;
 }
 
 .headerRow {
@@ -10,9 +10,30 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   gap: var(--spacing-md);
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: var(--spacing-sm) 0 var(--spacing-sm) 0;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-muted) transparent;
+}
+
+.grid::-webkit-scrollbar {
+  height: 8px;
+}
+
+.grid::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.grid::-webkit-scrollbar-thumb {
+  background: var(--color-muted);
+  border-radius: 4px;
+}
+
+.grid::-webkit-scrollbar-thumb:hover {
+  background: var(--color-subtext);
 }
 
 .card {
@@ -26,11 +47,17 @@
   text-decoration: none;
   color: inherit;
   cursor: pointer;
+  flex: 0 0 auto;
+  min-width: 300px;
+  max-width: 400px;
+  width: 100%;
 }
 
 .card:hover {
   transform: translateY(-2px);
   box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+  z-index: 10;
+  position: relative;
 }
 
 .cardHeader {
@@ -81,8 +108,9 @@
 }
 
 @media (max-width: 720px) {
-  .grid {
-    grid-template-columns: 1fr;
+  .card {
+    min-width: 280px;
+    max-width: 100%;
   }
 }
 

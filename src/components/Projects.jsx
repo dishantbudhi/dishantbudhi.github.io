@@ -1,15 +1,18 @@
 import styles from './Projects.module.css'
 import { projectData } from '../data/projectData'
+import SectionHeader from './common/SectionHeader'
 
-export default function Projects() {
+/**
+ * Projects component - displays a horizontal scrolling list of projects
+ * @param {Array} projects - Optional array of projects to display (defaults to projectData)
+ */
+export default function Projects({ projects = projectData }) {
   return (
     <section className={styles.section}>
       <div className="container reveal" data-reveal>
-        <div className={styles.headerRow}>
-          <div className="badge">PROJECTS</div>
-        </div>
+        <SectionHeader badge="PROJECTS" />
         <div className={styles.grid}>
-          {projectData.map((proj) => (
+          {projects.map((proj) => (
             <a key={proj.title} href={proj.href} target="_blank" rel="noreferrer" className={styles.card}>
               <div className={styles.cardHeader}>
                 <div className={styles.icon}>{proj.icon}</div>

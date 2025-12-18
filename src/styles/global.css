@@ -114,4 +114,14 @@ a:hover {
   z-index: -1;
 }
 
+/* Dark orange theme for personal page */
+.theme-orange {
+  --color-accent: #ff6b35;
+}
+
+/* Convert blue logo to dark orange on personal page */
+.theme-orange .logo {
+  filter: hue-rotate(180deg) saturate(1.5) brightness(1.1);
+}
+
 
