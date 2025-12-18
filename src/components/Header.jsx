@@ -8,12 +8,12 @@ export default function Header() {
         <div className={styles.inner}>
           <div className={styles.brand}>
             <Link to="/">
-              <img src="/files/weblogo.png" alt="dB logo" className={styles.logo} />
+              <img src="/files/weblogo.png" alt="dB logo" className={`${styles.logo} logo`} />
             </Link>
           </div>
           <nav className={styles.nav}>
-            <Link to="/" className={styles.navLink}>Career</Link>
-            <Link to="/personal" className={styles.navLink}>Personal</Link>
+            <Link to="/" className={styles.navLink}>Work</Link>
+            <Link to="/personal" className={styles.navLink}>Life</Link>
           </nav>
           <div className={styles.meta}>
             <div className={styles.name}>Dishant Budhi</div>

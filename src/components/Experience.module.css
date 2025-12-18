@@ -1,5 +1,5 @@
 .section {
-  padding: var(--spacing-lg) 0 var(--spacing-md) 0;
+  padding: var(--spacing-xl) 0 var(--spacing-lg) 0;
 }
 
 .headerRow {
@@ -32,6 +32,13 @@
 .role {
   color: var(--color-subtext);
   margin-bottom: 6px;
+}
+
+.team {
+  color: var(--color-subtext);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  font-style: italic;
 }
 
 .period {

@@ -1,0 +1,10 @@
+.section {
+  padding: var(--spacing-xl) 0 var(--spacing-lg) 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-lg) 0 var(--spacing-md) 0;
+  }
+}
+

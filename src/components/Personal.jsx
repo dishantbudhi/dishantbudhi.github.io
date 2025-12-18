@@ -1,39 +1,55 @@
 import styles from './Personal.module.css'
 import { personalData } from '../data/personalData'
+import Badge from './common/Badge'
 
-export default function Personal() {
+/**
+ * Personal component - displays personal interests section
+ * @param {Object} data - Personal data object (defaults to personalData)
+ * @param {string} className - Additional CSS classes
+ */
+export default function Personal({ data = personalData, className = '' }) {
   return (
-    <section className={styles.personal}>
+    <section className={`${styles.personal} ${className}`}>
       <div className="container">
-        <h1 className={styles.title}>{personalData.intro.title}</h1>
+        {data.intro.title && (
+          <h1 className={styles.title}>{data.intro.title}</h1>
+        )}
         <div className={styles.aboutSection}>
-          <div className="badge">{personalData.intro.badge}</div>
-          <p className={styles.aboutText}>
-            {personalData.intro.description}
-          </p>
+          {data.intro.badge && <Badge>{data.intro.badge}</Badge>}
+          {data.intro.description && (
+            <p className={styles.aboutText}>
+              {data.intro.description}
+            </p>
+          )}
         </div>
         
         <div className={styles.contentGrid}>
-          <div className={styles.imageContainer}>
-            <img 
-              src={personalData.image.src}
-              alt={personalData.image.alt}
-              className={styles.interestsImage}
-            />
-          </div>
+          {data.image && (
+            <div className={styles.imageContainer}>
+              <img 
+                src={data.image.src}
+                alt={data.image.alt}
+                className={styles.interestsImage}
+              />
+            </div>
+          )}
           
           <div className={styles.interestsContent}>
-            {personalData.interests.map((interest, index) => (
+            {data.interests?.map((interest, index) => (
               <div key={index} className="reveal" data-reveal>
-                <div className="badge">{interest.badge}</div>
-                <p className={styles.interestText}>
-                  {interest.description}
-                </p>
-                <ul className={styles.interestList}>
-                  {interest.items.map((item, itemIndex) => (
-                    <li key={itemIndex}>{item}</li>
-                  ))}
-                </ul>
+                {interest.badge && <Badge>{interest.badge}</Badge>}
+                {interest.description && (
+                  <p className={styles.interestText}>
+                    {interest.description}
+                  </p>
+                )}
+                {interest.items && interest.items.length > 0 && (
+                  <ul className={styles.interestList}>
+                    {interest.items.map((item, itemIndex) => (
+                      <li key={itemIndex}>{item}</li>
+                    ))}
+                  </ul>
+                )}
               </div>
             ))}
           </div>
