@@ -22,8 +22,6 @@
   align-items: start;
 }
 
-.itemLeft {}
-
 .company {
   font-weight: 700;
   margin-bottom: 4px;
@@ -46,8 +44,6 @@
   font-size: 0.85rem;
   letter-spacing: 0.06em;
 }
-
-.itemRight {}
 
 .description {
   color: var(--color-subtext);
