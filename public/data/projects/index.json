@@ -1,0 +1,26 @@
+[
+  {
+    "slug": "spotify-analytics",
+    "title": "Spotify Analytics",
+    "year": 2025,
+    "tags": ["Data Analytics", "Python", "Streamlit"],
+    "thumbnail": "hero.jpg",
+    "summary": "End-to-end analytics pipeline surfacing personal listening patterns and preference shifts."
+  },
+  {
+    "slug": "ballwatch",
+    "title": "BallWatch",
+    "year": 2025,
+    "tags": ["Flask", "MySQL", "Streamlit"],
+    "thumbnail": "hero.jpg",
+    "summary": "Multi-persona basketball analytics platform with role-specific insights for coaches, GMs, and analysts."
+  },
+  {
+    "slug": "hooper",
+    "title": "Hooper",
+    "year": 2025,
+    "tags": ["Express.js", "React", "Ollama"],
+    "thumbnail": "hero.jpg",
+    "summary": "Full-stack basketball chatbot with real-time streaming and a local LLM backend."
+  }
+]

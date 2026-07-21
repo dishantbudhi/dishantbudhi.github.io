@@ -1,0 +1,16 @@
+.figure {
+  margin: var(--spacing-md) 0;
+}
+
+.image {
+  width: 100%;
+  border-radius: var(--radius-md);
+  display: block;
+}
+
+.caption {
+  margin-top: var(--spacing-xs);
+  color: var(--color-subtext);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}

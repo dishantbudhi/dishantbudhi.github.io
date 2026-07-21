@@ -1,0 +1,26 @@
+{
+  "slug": "ballwatch",
+  "title": "BallWatch",
+  "year": 2025,
+  "tags": ["Flask", "MySQL", "Streamlit"],
+  "thumbnail": "hero.jpg",
+  "summary": "Multi-persona basketball analytics platform with role-specific insights for coaches, GMs, and analysts.",
+  "blocks": [
+    {
+      "type": "text",
+      "content": "## Overview\n\nBallWatch is a multi-persona basketball analytics platform that surfaces role-specific insights for coaches, general managers, and analysts — built on a normalized MySQL database of real NBA season data."
+    },
+    {
+      "type": "text",
+      "content": "## What I Built\n\nDesigned a schema to store player stats, team performance, and game logs, then built a Flask API layer with persona-aware query routing. A Streamlit front end lets each user type — coach, GM, scout — see exactly the data relevant to their decisions without wading through noise."
+    },
+    {
+      "type": "text",
+      "content": "## Stack\n\nFlask · MySQL · SQLAlchemy · Streamlit · Python"
+    },
+    {
+      "type": "text",
+      "content": "## Links\n\n[View on GitHub](https://github.com/dishantbudhi/BallWatch)"
+    }
+  ]
+}

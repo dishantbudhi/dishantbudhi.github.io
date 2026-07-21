@@ -1,0 +1,26 @@
+{
+  "slug": "hooper",
+  "title": "Hooper",
+  "year": 2025,
+  "tags": ["Express.js", "React", "Ollama"],
+  "thumbnail": "hero.jpg",
+  "summary": "Full-stack basketball chatbot with real-time streaming and a local LLM backend.",
+  "blocks": [
+    {
+      "type": "text",
+      "content": "## Overview\n\nHooper is a full-stack basketball chatbot that answers natural language questions about NBA players, teams, and history — powered by a local LLM via Ollama with real-time response streaming."
+    },
+    {
+      "type": "text",
+      "content": "## What I Built\n\nBuilt an Express.js backend that pipes Ollama's streaming output directly to the client via server-sent events, keeping latency low and the interface feeling responsive. The React front end handles stream parsing and renders markdown responses incrementally as they arrive."
+    },
+    {
+      "type": "text",
+      "content": "## Stack\n\nExpress.js · React · Ollama · Server-Sent Events · Node.js"
+    },
+    {
+      "type": "text",
+      "content": "## Links\n\n[View on GitHub](https://github.com/dishantbudhi/Hooper)"
+    }
+  ]
+}

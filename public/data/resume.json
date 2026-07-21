@@ -1,0 +1,25 @@
+{
+  "experience": [
+    {
+      "company": "Harvard Business School",
+      "role": "Product Manager",
+      "team": "Student Association",
+      "dates": "JUL 2024 – DEC 2024",
+      "bullets": [
+        "Managed digital and physical storefront operations with 50+ SKUs across vendor partnerships, generating $200K+ in annual revenue.",
+        "Streamlined fulfillment processes and automated inventory tracking, reducing manual processing time by 50%.",
+        "Led cross-functional coordination between vendors, finance, and operations teams to maintain SLA targets."
+      ]
+    },
+    {
+      "company": "Habits",
+      "role": "Product Manager",
+      "dates": "FEB 2024 – JUN 2024",
+      "bullets": [
+        "Shipped Plaid API integration with an Agile team, increasing user activation from 45% to 70% and adding 20+ monthly active users.",
+        "Led QA testing for Azure-to-AWS migration, achieving 93% system reliability while reducing infrastructure costs by $2K/month.",
+        "Defined and tracked product metrics across the funnel, surfacing insights that shaped the next sprint roadmap."
+      ]
+    }
+  ]
+}

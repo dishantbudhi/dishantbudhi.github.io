@@ -1,0 +1,26 @@
+{
+  "slug": "spotify-analytics",
+  "title": "Spotify Analytics",
+  "year": 2025,
+  "tags": ["Data Analytics", "Python", "Streamlit"],
+  "thumbnail": "hero.jpg",
+  "summary": "End-to-end analytics pipeline surfacing personal listening patterns and preference shifts.",
+  "blocks": [
+    {
+      "type": "text",
+      "content": "## Overview\n\nBuilt an end-to-end analytics pipeline to process long-term personal Spotify data, applying temporal and behavioral analysis to surface listening patterns and preference shifts not captured by native platform insights."
+    },
+    {
+      "type": "text",
+      "content": "## What I Built\n\nUsing the Spotify Web API and Python, I pulled years of streaming history and built a Streamlit dashboard that surfaces stats the platform doesn't show you — top genres by era, listening time distribution across the day/week, how my music taste shifted season to season, and artist loyalty over time."
+    },
+    {
+      "type": "text",
+      "content": "## Stack\n\nPython · Pandas · Spotipy · Streamlit · Plotly"
+    },
+    {
+      "type": "text",
+      "content": "## Links\n\n[View on GitHub](https://github.com/dishantbudhi/BeatScope)"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "slug": "philosophy",
+  "title": "Philosophy",
+  "cover": "cover.jpg",
+  "summary": "Studying fundamental questions of existence, ethics, and what it means to reason clearly.",
+  "blocks": [
+    {
+      "type": "text",
+      "content": "## Starting point\n\nI came to philosophy through questions that kept resurfacing in other domains — what makes a decision rational, how to reason under uncertainty, when confidence is warranted versus when it's a failure of epistemic humility."
+    },
+    {
+      "type": "text",
+      "content": "## Areas I read in\n\nEpistemology — how we know what we know and what the limits of that are. Ethics — less the trolley problems and more the practical questions about responsibility, institutions, and how values interact when they conflict. Philosophy of mind, occasionally, when I'm in the mood to be confused."
+    },
+    {
+      "type": "text",
+      "content": "## What I take from it\n\nMostly: intellectual honesty. Being willing to say \"I don't know\" or \"I was wrong\" is harder than it looks and worth practicing. Good philosophy teaches you to notice when you're sliding from reasoning to rationalizing."
+    }
+  ]
+}

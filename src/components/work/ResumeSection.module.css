@@ -1,0 +1,57 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: var(--spacing-lg);
+  align-items: start;
+}
+
+.company {
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.role {
+  color: var(--color-subtext);
+  margin-bottom: 4px;
+}
+
+.team {
+  color: var(--color-subtext);
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+.dates {
+  color: var(--color-subtext);
+  font-size: 0.85rem;
+  letter-spacing: 0.06em;
+}
+
+.bullets {
+  margin: 0;
+  padding-left: 16px;
+  color: var(--color-subtext);
+  line-height: 1.7;
+}
+
+.bullets li + li {
+  margin-top: 8px;
+}
+
+@media (max-width: 720px) {
+  .item {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-sm);
+  }
+
+  .list {
+    gap: var(--spacing-lg);
+  }
+}

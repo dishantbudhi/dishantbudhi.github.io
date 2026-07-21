@@ -1,0 +1,20 @@
+{
+  "slug": "sports",
+  "title": "Sports",
+  "cover": "cover.jpg",
+  "summary": "Following professional leagues closely — the strategy, the narratives, and the analytics underneath.",
+  "blocks": [
+    {
+      "type": "text",
+      "content": "## The game behind the game\n\nI've followed sports closely since I was a kid, but what holds my attention now is less about the scoreboard and more about the decisions underneath it — roster construction, in-game adjustments, the relationship between analytics and instinct."
+    },
+    {
+      "type": "text",
+      "content": "## Basketball\n\nNBA is my main sport. I follow team-building strategy closely — how organizations think about draft capital, contract flexibility, two-way players, and building around a franchise anchor. The tension between conventional wisdom and data-driven scouting is something I find endlessly interesting."
+    },
+    {
+      "type": "text",
+      "content": "## Football & Soccer\n\nFootball for the scheme complexity — how coordinators adapt across a season and how a single personnel package can break a defensive structure. Soccer for the tactical side: pressing systems, positional play, and how coaching identity shows up at the squad level."
+    }
+  ]
+}

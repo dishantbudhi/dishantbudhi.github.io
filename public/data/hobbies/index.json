@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "sports",
+    "title": "Sports",
+    "cover": "cover.jpg",
+    "summary": "Following professional leagues closely — the strategy, the narratives, and the analytics underneath."
+  },
+  {
+    "slug": "history",
+    "title": "History",
+    "cover": "cover.jpg",
+    "summary": "Exploring how institutions evolve and how decisions made under uncertainty compound over centuries."
+  },
+  {
+    "slug": "philosophy",
+    "title": "Philosophy",
+    "cover": "cover.jpg",
+    "summary": "Studying fundamental questions of existence, ethics, and what it means to reason clearly."
+  }
+]

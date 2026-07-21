@@ -1,0 +1,15 @@
+.detail {
+  padding: var(--spacing-lg) 0;
+}
+
+.title {
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.description {
+  color: var(--color-subtext);
+  line-height: 1.75;
+  margin: 0;
+}
