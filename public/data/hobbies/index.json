@@ -2,19 +2,322 @@
   {
     "slug": "sports",
     "title": "Sports",
-    "cover": "cover.jpg",
-    "summary": "Following professional leagues closely — the strategy, the narratives, and the analytics underneath."
+    "summary": "The competition, community, and unforgettable stories that make every season feel different.",
+    "previewImage": {
+      "src": "/files/interests.JPG",
+      "alt": "Sports interest preview",
+      "position": "center 28%"
+    },
+    "detailImages": [
+      {
+        "src": "/files/headshot.png",
+        "alt": "Sports detail portrait",
+        "position": "center 35%"
+      },
+      {
+        "src": "/files/minilogo.png",
+        "alt": "Sports detail graphic",
+        "position": "center"
+      },
+      {
+        "src": "/images/interests/sports/detail-03.webp",
+        "alt": "Sports detail image three"
+      },
+      {
+        "src": "/images/interests/sports/detail-04.webp",
+        "alt": "Sports detail image four"
+      },
+      {
+        "src": "/images/interests/sports/detail-05.webp",
+        "alt": "Sports detail image five"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "content": "## The game behind the game\n\nI've followed sports closely since I was a kid, but what holds my attention now is less about the scoreboard and more about the decisions underneath it — roster construction, in-game adjustments, the relationship between analytics and instinct."
+      },
+      {
+        "type": "text",
+        "content": "## Basketball\n\nNBA is my main sport. I follow team-building strategy closely — how organizations think about draft capital, contract flexibility, two-way players, and building around a franchise anchor. The tension between conventional wisdom and data-driven scouting is something I find endlessly interesting."
+      },
+      {
+        "type": "text",
+        "content": "## Football & Soccer\n\nFootball for the scheme complexity — how coordinators adapt across a season and how a single personnel package can break a defensive structure. Soccer for the tactical side: pressing systems, positional play, and how coaching identity shows up at the squad level."
+      }
+    ]
   },
   {
     "slug": "history",
     "title": "History",
-    "cover": "cover.jpg",
-    "summary": "Exploring how institutions evolve and how decisions made under uncertainty compound over centuries."
+    "summary": "Looking backward to better understand how people, cultures, and ideas continue to shape the present.",
+    "previewImage": {
+      "src": "/files/headshot.png",
+      "alt": "History interest preview",
+      "position": "center 35%"
+    },
+    "detailImages": [
+      {
+        "src": "/files/interests.JPG",
+        "alt": "History detail image one",
+        "position": "center 28%"
+      },
+      {
+        "src": "/files/minilogo.png",
+        "alt": "History detail image two",
+        "position": "center"
+      },
+      {
+        "src": "/images/interests/history/detail-03.webp",
+        "alt": "History detail image three"
+      },
+      {
+        "src": "/images/interests/history/detail-04.webp",
+        "alt": "History detail image four"
+      },
+      {
+        "src": "/images/interests/history/detail-05.webp",
+        "alt": "History detail image five"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "content": "## Why history\n\nI read history less for facts and more for the decision-making patterns inside it. The people who shaped events were usually operating under deep uncertainty, incomplete information, and the weight of precedent — conditions that feel familiar."
+      },
+      {
+        "type": "text",
+        "content": "## What I find compelling\n\nHow institutions form around a crisis and then outlast their original purpose. How a single contingent event — a battle, a treaty, a miscommunication — sends a system down a completely different path. The gap between how decisions looked in the moment versus how they read a century later."
+      },
+      {
+        "type": "text",
+        "content": "## Current interest\n\nLate 19th and early 20th century — the period where modern organizations, states, and technologies were crystallizing simultaneously. The patterns from that era show up in how we think about institutions and coordination problems today."
+      }
+    ]
+  },
+  {
+    "slug": "music",
+    "title": "Music",
+    "summary": "The soundtrack to everyday life — a way to hold onto memories, moods, places, and people.",
+    "previewImage": {
+      "src": "/files/interests.JPG",
+      "alt": "Music interest preview",
+      "position": "center 42%"
+    },
+    "detailImages": [
+      {
+        "src": "/files/interests.JPG",
+        "alt": "Music detail image one",
+        "position": "center 32%"
+      },
+      {
+        "src": "/files/headshot.png",
+        "alt": "Music detail image two",
+        "position": "center 38%"
+      },
+      {
+        "src": "/images/interests/music/detail-03.webp",
+        "alt": "Music detail image three"
+      },
+      {
+        "src": "/images/interests/music/detail-04.webp",
+        "alt": "Music detail image four"
+      },
+      {
+        "src": "/images/interests/music/detail-05.webp",
+        "alt": "Music detail image five"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "media-profile",
+        "platform": "spotify",
+        "href": "https://open.spotify.com/user/dishant_budhi",
+        "collectionLabel": "Spotify",
+        "items": [
+          {
+            "title": "2WO",
+            "href": "https://open.spotify.com/playlist/1YoKcVAYhvkKVFWGVWMBAU",
+            "image": "/images/music/2wo.webp"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "## A soundtrack for everything\n\nMusic has a way of attaching itself to moments. A song can bring back a place, a person, or an entire season of life before I have time to think about why."
+      },
+      {
+        "type": "text",
+        "content": "## How I listen\n\nMy listening changes with my surroundings — energetic when I need momentum, quieter when I want to think, and nostalgic more often than I expect. I enjoy finding new artists, but I always return to the songs that already feel like home."
+      }
+    ]
+  },
+  {
+    "slug": "film",
+    "title": "Film",
+    "summary": "Stories that make me laugh, sit with a new perspective, or keep thinking long after the credits.",
+    "previewImage": {
+      "src": "/files/headshot.png",
+      "alt": "Film interest preview",
+      "position": "center 42%"
+    },
+    "detailImages": [
+      {
+        "src": "/files/headshot.png",
+        "alt": "Film detail image one",
+        "position": "center 38%"
+      },
+      {
+        "src": "/files/minilogo.png",
+        "alt": "Film detail image two",
+        "position": "center"
+      },
+      {
+        "src": "/images/interests/film/detail-03.webp",
+        "alt": "Film detail image three"
+      },
+      {
+        "src": "/images/interests/film/detail-04.webp",
+        "alt": "Film detail image four"
+      },
+      {
+        "src": "/images/interests/film/detail-05.webp",
+        "alt": "Film detail image five"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "media-profile",
+        "platform": "letterboxd",
+        "href": "https://letterboxd.com/dishantbudhi/",
+        "collectionLabel": "Letterboxd",
+        "items": [
+          {
+            "title": "Dazed and Confused",
+            "subtitle": "1993",
+            "href": "https://letterboxd.com/film/dazed-and-confused/",
+            "image": "https://a.ltrbxd.com/resized/film-poster/4/7/0/2/9/47029-dazed-and-confused-0-300-0-450-crop.jpg?v=a3b615703a"
+          },
+          {
+            "title": "Good Will Hunting",
+            "subtitle": "1997",
+            "href": "https://letterboxd.com/film/good-will-hunting/",
+            "image": "https://a.ltrbxd.com/resized/film-poster/5/1/6/2/1/51621-good-will-hunting-0-300-0-450-crop.jpg?v=acb4766abd"
+          },
+          {
+            "title": "Before Sunrise",
+            "subtitle": "1995",
+            "href": "https://letterboxd.com/film/before-sunrise/",
+            "image": "https://a.ltrbxd.com/resized/film-poster/5/1/9/7/4/51974-before-sunrise-0-300-0-450-crop.jpg?v=006e8fedea"
+          },
+          {
+            "title": "Slumdog Millionaire",
+            "subtitle": "2008",
+            "href": "https://letterboxd.com/film/slumdog-millionaire/",
+            "image": "https://a.ltrbxd.com/resized/film-poster/4/4/6/1/3/44613-slumdog-millionaire-0-300-0-450-crop.jpg?v=6cff9e413f"
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "content": "## Stories that stay with me\n\nI love films that are entertaining in the moment and still leave something behind afterward — a question, an image, a conversation, or a perspective I had not considered before."
+      },
+      {
+        "type": "text",
+        "content": "## What I notice\n\nCharacter and atmosphere usually pull me in first. I enjoy seeing how writing, performance, sound, and visual choices work together to make a world feel honest, even when that world is completely unfamiliar."
+      }
+    ]
+  },
+  {
+    "slug": "arts",
+    "title": "Arts",
+    "summary": "Finding new ways of seeing through design, photography, museums, and creative expression.",
+    "previewImage": {
+      "src": "/files/minilogo.png",
+      "alt": "Arts interest preview",
+      "position": "center"
+    },
+    "detailImages": [
+      {
+        "src": "/files/minilogo.png",
+        "alt": "Arts detail image one",
+        "position": "center"
+      },
+      {
+        "src": "/files/interests.JPG",
+        "alt": "Arts detail image two",
+        "position": "center 35%"
+      },
+      {
+        "src": "/images/interests/arts/detail-03.webp",
+        "alt": "Arts detail image three"
+      },
+      {
+        "src": "/images/interests/arts/detail-04.webp",
+        "alt": "Arts detail image four"
+      },
+      {
+        "src": "/images/interests/arts/detail-05.webp",
+        "alt": "Arts detail image five"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "content": "## New ways of seeing\n\nArt slows me down. Whether it is a photograph, an exhibition, an illustration, or a thoughtfully designed space, I enjoy noticing the choices that make something feel distinct."
+      },
+      {
+        "type": "text",
+        "content": "## What I take with me\n\nThe arts remind me that there is rarely only one way to interpret an experience. They make me more attentive to detail, more comfortable with ambiguity, and more curious about how other people see the world."
+      }
+    ]
   },
   {
     "slug": "philosophy",
     "title": "Philosophy",
-    "cover": "cover.jpg",
-    "summary": "Studying fundamental questions of existence, ethics, and what it means to reason clearly."
+    "summary": "Making space for difficult questions about meaning, responsibility, and how to live thoughtfully.",
+    "previewImage": {
+      "src": "/files/minilogo.png",
+      "alt": "Philosophy interest preview",
+      "position": "center"
+    },
+    "detailImages": [
+      {
+        "src": "/files/headshot.png",
+        "alt": "Philosophy detail portrait",
+        "position": "center 35%"
+      },
+      {
+        "src": "/files/interests.JPG",
+        "alt": "Philosophy detail image two",
+        "position": "center 28%"
+      },
+      {
+        "src": "/images/interests/philosophy/detail-03.webp",
+        "alt": "Philosophy detail image three"
+      },
+      {
+        "src": "/images/interests/philosophy/detail-04.webp",
+        "alt": "Philosophy detail image four"
+      },
+      {
+        "src": "/images/interests/philosophy/detail-05.webp",
+        "alt": "Philosophy detail image five"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "content": "## Starting point\n\nI came to philosophy through questions that kept resurfacing in other domains — what makes a decision rational, how to reason under uncertainty, when confidence is warranted versus when it's a failure of epistemic humility."
+      },
+      {
+        "type": "text",
+        "content": "## Areas I read in\n\nEpistemology — how we know what we know and what the limits of that are. Ethics — less the trolley problems and more the practical questions about responsibility, institutions, and how values interact when they conflict. Philosophy of mind, occasionally, when I'm in the mood to be confused."
+      },
+      {
+        "type": "text",
+        "content": "## What I take from it\n\nMostly: intellectual honesty. Being willing to say \"I don't know\" or \"I was wrong\" is harder than it looks and worth practicing. Good philosophy teaches you to notice when you're sliding from reasoning to rationalizing."
+      }
+    ]
   }
 ]

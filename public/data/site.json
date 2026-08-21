@@ -1,9 +1,83 @@
 {
-  "name": "Dishant Budhi",
-  "location": "Boston, MA",
-  "email": "budhi.d@northeastern.edu",
-  "github": "https://github.com/dishantbudhi",
-  "linkedin": "https://linkedin.com/in/dishantbudhi",
-  "calendly": "https://calendly.com/dbudhi",
-  "version": "v5.0.0"
+  "profile": {
+    "name": "Dishant Budhi",
+    "location": "Boston, MA"
+  },
+  "brand": {
+    "logo": "/files/weblogo.png",
+    "alt": "dB logo",
+    "menuLabel": "Choose a section"
+  },
+  "navigation": [
+    { "id": "professional", "label": "Professional", "path": "/professional" },
+    { "id": "personal", "label": "Personal", "path": "/personal" }
+  ],
+  "professional": {
+    "headline": "Curious. Analytical. Grounded.",
+    "intro": "CS and Business student at Northeastern, focused on the intersection of technology and product strategy.",
+    "ctaLabel": "Let's connect.",
+    "ctaHref": "mailto:budhi.d@northeastern.edu",
+    "experienceLabel": "EXPERIENCE",
+    "projectsLabel": "PROJECTS"
+  },
+  "personal": {
+    "headline": "The things that shape me.",
+    "intro": "In my free time, I enjoy sports, history, music, film, the arts, and philosophy. These interests deepen my understanding of myself and the world around me.",
+    "interestsLabel": "INTERESTS",
+    "galleryLabel": "PHOTOS",
+    "galleryFallback": [
+      {
+        "src": "/files/interests.JPG",
+        "alt": "NBA Draft portrait",
+        "position": "center 28%",
+        "caption": "NBA Draft"
+      },
+      {
+        "src": "/files/headshot.png",
+        "alt": "Dishant Budhi portrait",
+        "position": "center 35%",
+        "caption": "Portrait"
+      },
+      {
+        "src": "/files/minilogo.png",
+        "alt": "Smiley graphic",
+        "position": "center",
+        "caption": "A small reminder to smile"
+      },
+      {
+        "src": "/files/interests.JPG",
+        "alt": "NBA Draft portrait detail",
+        "position": "center 38%",
+        "caption": "Draft day"
+      },
+      {
+        "src": "/files/headshot.png",
+        "alt": "Dishant Budhi portrait detail",
+        "position": "center 45%",
+        "caption": "Portrait detail"
+      }
+    ]
+  },
+  "ui": {
+    "loading": "Loading...",
+    "experienceError": "Failed to load experience.",
+    "projectsError": "Failed to load projects.",
+    "interestsError": "Failed to load interests.",
+    "interestNotFound": "Interest not found.",
+    "projectNotFound": "Project not found.",
+    "backToPersonal": "← Back to Personal",
+    "backToProfessional": "← Back to Professional",
+    "photoDialogLabel": "Photo viewer",
+    "closePhoto": "Close photo viewer"
+  },
+  "footer": {
+    "version": "v5.0.0",
+    "lastUpdated": "April 2026",
+    "links": [
+      { "label": "GitHub", "href": "https://github.com/dishantbudhi", "external": true },
+      { "label": "LinkedIn", "href": "https://linkedin.com/in/dishantbudhi", "external": true },
+      { "label": "Calendly", "href": "https://calendly.com/dbudhi", "external": true },
+      { "label": "Resume", "href": "/files/resume.pdf", "download": true }
+    ]
+  }
 }

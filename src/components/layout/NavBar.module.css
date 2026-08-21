@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   backdrop-filter: blur(6px);
-  background: linear-gradient(to bottom, rgba(10,10,11,0.85), rgba(10,10,11,0.4) 60%, rgba(10,10,11,0));
+  background: linear-gradient(to bottom, var(--header-bg-strong), var(--header-bg-soft) 60%, var(--header-bg-clear));
   z-index: 100;
 }
 
@@ -10,13 +10,32 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--spacing-md) 0;
+  min-height: clamp(4.75rem, 9vw, 5.5rem);
+  padding-block: var(--spacing-sm);
   gap: var(--spacing-md);
 }
 
 .brand {
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.brandButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0;
+  color: var(--color-text);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+}
+
+.brandButton:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 5px;
 }
 
 .logo {
@@ -25,30 +44,47 @@
   object-fit: contain;
 }
 
-.nav {
-  display: flex;
-  gap: var(--spacing-lg);
+.chevron {
+  width: 8px;
+  height: 8px;
+  border-right: 1.5px solid currentColor;
+  border-bottom: 1.5px solid currentColor;
+  transform: rotate(45deg) translateY(-2px);
+  transform-origin: center;
+  transition: transform 180ms ease;
 }
 
-.navLink {
+.chevronOpen {
+  transform: rotate(225deg) translate(-1px, -1px);
+}
+
+.menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  left: 0;
+  min-width: 10rem;
+  padding: 6px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-muted);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-soft);
+}
+
+.menuItem {
+  display: block;
+  padding: 0.625rem 0.75rem;
+  border-radius: 6px;
   color: var(--color-subtext);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 500;
-  text-decoration: none;
-  transition: color 200ms ease;
 }
 
-.navLink:hover {
-  color: var(--color-accent);
-}
-
-.navLinkActive {
+.menuItem:hover,
+.menuItemActive {
   color: var(--color-text);
-}
-
-.navLinkActive:hover {
+  background: var(--color-muted);
   color: var(--color-text);
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .meta {

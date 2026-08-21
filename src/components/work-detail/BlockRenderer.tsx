@@ -3,6 +3,7 @@ import TextBlock from './TextBlock'
 import ImageBlock from './ImageBlock'
 import VideoBlock from './VideoBlock'
 import HeroBlock from './HeroBlock'
+import MediaProfileBlock from './MediaProfileBlock'
 
 interface BlockRendererProps {
   block: ContentBlock
@@ -19,5 +20,7 @@ export default function BlockRenderer({ block, slug }: BlockRendererProps) {
       return <VideoBlock url={block.url} />
     case 'hero':
       return <HeroBlock src={block.src} alt={block.alt} slug={slug} />
+    case 'media-profile':
+      return <MediaProfileBlock profile={block} />
   }
 }

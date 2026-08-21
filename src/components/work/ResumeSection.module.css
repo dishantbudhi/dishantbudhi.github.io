@@ -1,14 +1,20 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xl);
+  gap: 0;
 }
 
 .item {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
-  gap: var(--spacing-lg);
+  gap: var(--spacing-xl);
   align-items: start;
+  padding-block: var(--spacing-lg);
+  border-top: 1px solid var(--color-muted);
+}
+
+.item:last-child {
+  border-bottom: 1px solid var(--color-muted);
 }
 
 .company {
@@ -48,10 +54,7 @@
 @media (max-width: 720px) {
   .item {
     grid-template-columns: 1fr;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
   }
 
-  .list {
-    gap: var(--spacing-lg);
-  }
 }

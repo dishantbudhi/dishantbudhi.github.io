@@ -1,17 +1,17 @@
 import ProjectCard from './ProjectCard'
-import type { ProjectMeta } from '../../types'
-import styles from './ProjectGrid.module.css'
+import CardGrid from '../common/CardGrid'
+import type { ProjectFull } from '../../types'
 
 interface ProjectGridProps {
-  projects: ProjectMeta[]
+  projects: ProjectFull[]
 }
 
 export default function ProjectGrid({ projects }: ProjectGridProps) {
   return (
-    <div className={styles.grid}>
+    <CardGrid>
       {projects.map((project) => (
         <ProjectCard key={project.slug} project={project} />
       ))}
-    </div>
+    </CardGrid>
   )
 }

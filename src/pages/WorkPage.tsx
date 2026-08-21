@@ -3,41 +3,39 @@ import { useFetch } from '../hooks/useFetch'
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll'
 import Section from '../components/common/Section'
 import SectionHeader from '../components/common/SectionHeader'
+import PageHero from '../components/common/PageHero'
 import ProjectGrid from '../components/work/ProjectGrid'
 import ResumeSection from '../components/work/ResumeSection'
-import type { ResumeData } from '../types'
-import styles from './WorkPage.module.css'
+import type { ResumeData, SiteData } from '../types'
 
-export default function WorkPage() {
+export default function WorkPage({ site }: { site: SiteData }) {
   useRevealOnScroll()
   const { projects, loading: pLoading, error: pError } = useProjects()
   const { data: resume, loading: rLoading, error: rError } = useFetch<ResumeData>('/data/resume.json')
 
   return (
     <>
-      <Section reveal>
-        <h1 className={styles.headline}>Curious. Analytical. Grounded.</h1>
-        <p className={styles.intro}>
-          CS and Business student at Northeastern, focused on the intersection of
-          technology and product strategy.{' '}
-          <a href="mailto:budhi.d@northeastern.edu">Let&apos;s connect.</a>
-        </p>
+      <Section reveal variant="hero">
+        <PageHero
+          title={site.professional.headline}
+          description={site.professional.intro}
+          action={{ href: site.professional.ctaHref, label: site.professional.ctaLabel }}
+        />
       </Section>
 
       <Section reveal>
-        <SectionHeader badge="WORK" />
-        {rLoading && <p className="muted">Loading...</p>}
-        {rError && <p className="muted">Failed to load experience.</p>}
+        <SectionHeader badge={site.professional.experienceLabel} />
+        {rLoading && <p className="muted">{site.ui.loading}</p>}
+        {rError && <p className="muted">{site.ui.experienceError}</p>}
         {resume && <ResumeSection data={resume} />}
       </Section>
 
       <Section reveal>
-        <SectionHeader badge="PROJECTS" />
-        {pLoading && <p className="muted">Loading...</p>}
-        {pError && <p className="muted">Failed to load projects.</p>}
+        <SectionHeader badge={site.professional.projectsLabel} />
+        {pLoading && <p className="muted">{site.ui.loading}</p>}
+        {pError && <p className="muted">{site.ui.projectsError}</p>}
         {!pLoading && !pError && <ProjectGrid projects={projects} />}
       </Section>
-
     </>
   )
 }

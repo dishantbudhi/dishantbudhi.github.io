@@ -1,5 +1,9 @@
 import { useEffect, useRef } from 'react'
 
+interface ParticleCanvasProps {
+  inverted: boolean
+}
+
 interface Particle {
   x: number
   y: number
@@ -7,7 +11,7 @@ interface Particle {
   vy: number
 }
 
-export default function ParticleCanvas() {
+export default function ParticleCanvas({ inverted }: ParticleCanvasProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const animationRef = useRef<number>(0)
 
@@ -55,7 +59,8 @@ export default function ParticleCanvas() {
         if (p.y < 0 || p.y > window.innerHeight) p.vy *= -1
       }
 
-      ctx.fillStyle = 'rgba(255,255,255,0.45)'
+      const rgb = inverted ? '10,10,11' : '255,255,255'
+      ctx.fillStyle = `rgba(${rgb},0.45)`
       for (const p of particles) {
         ctx.beginPath()
         ctx.arc(p.x, p.y, 1.2, 0, Math.PI * 2)
@@ -71,7 +76,7 @@ export default function ParticleCanvas() {
           const dist = Math.hypot(dx, dy)
           if (dist < connectDistance) {
             const alpha = 1 - dist / connectDistance
-            ctx.strokeStyle = `rgba(255, 255, 255, ${alpha * 0.15})`
+            ctx.strokeStyle = `rgba(${rgb}, ${alpha * 0.15})`
             ctx.beginPath()
             ctx.moveTo(a.x, a.y)
             ctx.lineTo(b.x, b.y)
@@ -92,7 +97,7 @@ export default function ParticleCanvas() {
       window.removeEventListener('resize', resize)
       cancelAnimationFrame(animationRef.current)
     }
-  }, [])
+  }, [inverted])
 
   return <canvas id="particle-canvas" ref={canvasRef} />
 }

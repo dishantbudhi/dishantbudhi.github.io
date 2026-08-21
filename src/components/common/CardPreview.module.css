@@ -1,0 +1,45 @@
+.preview {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  min-height: clamp(8.5rem, 16vw, 11rem);
+  padding: var(--spacing-md);
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--color-preview-start), var(--color-preview-end));
+  border-bottom: 1px solid var(--color-muted);
+}
+
+.image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  object-position: var(--image-position, center);
+  transition: transform 300ms ease;
+}
+
+.scrim {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.28), transparent 46%, rgba(0, 0, 0, 0.18));
+}
+
+:global(.interactiveCard:hover) .image {
+  transform: scale(1.035);
+}
+
+.eyebrow {
+  position: absolute;
+  top: var(--spacing-sm);
+  left: var(--spacing-md);
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}

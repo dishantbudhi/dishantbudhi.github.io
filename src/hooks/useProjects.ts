@@ -1,7 +1,7 @@
 import { useFetch } from './useFetch'
-import type { ProjectMeta } from '../types'
+import type { ProjectFull } from '../types'
 
 export function useProjects() {
-  const { data, loading, error } = useFetch<ProjectMeta[]>('/data/projects/index.json')
+  const { data, loading, error } = useFetch<ProjectFull[]>('/data/projects/index.json')
   return { projects: data ?? [], loading, error }
 }

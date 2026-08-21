@@ -1,7 +1,7 @@
 import { useFetch } from './useFetch'
-import type { HobbyMeta } from '../types'
+import type { HobbyFull } from '../types'
 
 export function useHobbies() {
-  const { data, loading, error } = useFetch<HobbyMeta[]>('/data/hobbies/index.json')
+  const { data, loading, error } = useFetch<HobbyFull[]>('/data/hobbies/index.json')
   return { hobbies: data ?? [], loading, error }
 }

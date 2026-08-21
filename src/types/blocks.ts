@@ -20,4 +20,19 @@ export type HeroBlock = {
   alt?: string
 }
 
-export type ContentBlock = TextBlock | ImageBlock | VideoBlock | HeroBlock
+export type MediaProfileItem = {
+  title: string
+  href: string
+  subtitle?: string
+  image?: string
+}
+
+export type MediaProfileBlock = {
+  type: 'media-profile'
+  platform: 'spotify' | 'letterboxd'
+  href: string
+  collectionLabel: string
+  items?: MediaProfileItem[]
+}
+
+export type ContentBlock = TextBlock | ImageBlock | VideoBlock | HeroBlock | MediaProfileBlock
