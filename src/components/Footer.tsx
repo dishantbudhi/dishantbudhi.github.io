@@ -1,25 +1,30 @@
 import styles from './Footer.module.css'
 import type { SiteData } from '../types'
+import BasilIcon from './common/BasilIcon'
 
 export default function Footer({ data }: { data: SiteData['footer'] }) {
   return (
-    <footer className={styles.footer} id="contact">
+    <footer className={styles.footer} id="footer">
       <div className="container">
         <div className={styles.inner}>
-          <div className={styles.version}>{data.version} · Last updated: {data.lastUpdated}</div>
-          <div className={styles.links}>
-            {data.links.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target={link.external ? '_blank' : undefined}
-                rel={link.external ? 'noreferrer' : undefined}
-                download={link.download || undefined}
-              >
-                {link.label}
-              </a>
-            ))}
-          </div>
+          <div className={styles.meta}>{data.copyright}</div>
+          <a
+            className={styles.source}
+            href={data.sourceHref}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span>{data.sourceLabel}</span>
+            <BasilIcon name="arrowUp" className={styles.externalIcon} />
+          </a>
+          <button
+            className={styles.backToTop}
+            type="button"
+            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          >
+            <BasilIcon name="arrowUp" />
+            <span>{data.backToTopLabel}</span>
+          </button>
         </div>
       </div>
     </footer>

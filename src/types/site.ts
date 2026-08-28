@@ -1,14 +1,34 @@
 import type { ImageAsset } from './media'
 
-export interface NavigationItem {
-  id: 'professional' | 'personal'
-  label: string
-  path: string
-}
-
-export interface FooterLink {
+export interface DockNavigationItem {
+  id: string
   label: string
   href: string
+  icon: 'home' | 'user' | 'folder' | 'stack' | 'plus'
+}
+
+export interface SkillItem {
+  name: string
+  icon?: string
+}
+
+export interface SkillCategory {
+  title: string
+  items: SkillItem[]
+}
+
+export interface OutsideInterest {
+  label: string
+  icon: 'gamepad' | 'history' | 'music' | 'video' | 'palette' | 'book' | 'university' | 'lightbulb' | 'heartbeat' | 'fire' | 'processor'
+  href?: string
+}
+
+export interface ContactLink {
+  id: 'email' | 'linkedin' | 'github' | 'resume'
+  label: string
+  description: string
+  href: string
+  symbol: string
   external?: boolean
   download?: boolean
 }
@@ -17,20 +37,42 @@ export interface SiteData {
   profile: {
     name: string
     location: string
+    address: string
+    mapsHref: string
+    mapEmbedHref: string
   }
   brand: {
-    logo: string
+    professionalLogo: string
     alt: string
-    menuLabel: string
   }
-  navigation: NavigationItem[]
+  dockNavigation: DockNavigationItem[]
   professional: {
+    hero: {
+      greeting: string
+      workLabel: string
+      workHref: string
+    }
     headline: string
     intro: string
     ctaLabel: string
     ctaHref: string
     experienceLabel: string
     projectsLabel: string
+    projectsGithubHref: string
+    profileHeading: EditorialHeadingData
+    projectsHeading: EditorialHeadingData
+    alsoLikeLabel: string
+    focusStatement: string
+    skills: {
+      label: string
+      title: string
+      categories: SkillCategory[]
+    }
+    outsideInterests: OutsideInterest[]
+    contact: {
+      heading: EditorialHeadingData
+      links: ContactLink[]
+    }
   }
   personal: {
     headline: string
@@ -52,8 +94,14 @@ export interface SiteData {
     closePhoto: string
   }
   footer: {
-    version: string
-    lastUpdated: string
-    links: FooterLink[]
+    copyright: string
+    sourceLabel: string
+    sourceHref: string
+    backToTopLabel: string
   }
+}
+
+export interface EditorialHeadingData {
+  label: string
+  title: string
 }

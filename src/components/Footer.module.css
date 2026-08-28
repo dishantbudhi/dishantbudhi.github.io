@@ -1,67 +1,59 @@
 .footer {
-  margin-top: var(--spacing-xl);
-  padding-block: var(--spacing-lg);
+  margin-top: clamp(4rem, 8vw, 7rem);
+  padding-block: clamp(3rem, 6vw, 5rem);
   border-top: 1px solid var(--color-muted);
 }
 
 .inner {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--spacing-md);
-}
-
-.links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: var(--spacing-sm);
-}
-
-.links a {
-  padding: 6px 12px;
-  border: 1px solid var(--color-muted);
-  border-radius: var(--radius-sm);
-  color: var(--color-subtext);
-  font-size: 0.9rem;
-  transition: all 200ms ease;
-}
-
-.links a:hover {
-  background: var(--color-muted);
-  color: var(--color-text);
-}
-
-.version {
-  color: var(--color-subtext);
-  font-size: 0.85rem;
-  padding: 6px 12px;
-  border: 1px solid var(--color-muted);
-  border-radius: var(--radius-sm);
+  gap: 1.25rem;
   text-align: center;
 }
 
-@media (max-width: 720px) {
-  .inner {
-    flex-direction: column;
-    align-items: stretch;
-    gap: var(--spacing-md);
-  }
-  
-  .links {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    width: 100%;
-  }
-  
-  .links a {
-    text-align: center;
-    padding: 10px 16px;
-    font-size: 1rem;
-  }
-
-  .version {
-    width: 100%;
-  }
+.meta {
+  color: var(--color-subtext);
+  font-size: clamp(0.95rem, 1.8vw, 1.15rem);
 }
 
+.source,
+.backToTop {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--color-text);
+  transition: color 180ms ease, transform 180ms ease;
+}
+
+.source {
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+}
+
+.backToTop {
+  margin-top: 1rem;
+  padding: 0.75rem 1.15rem;
+  color: var(--color-subtext);
+  font-family: inherit;
+  font-size: 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-muted);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.source:hover,
+.backToTop:hover {
+  color: var(--color-accent);
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.backToTop:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.externalIcon {
+  transform: rotate(45deg);
+}

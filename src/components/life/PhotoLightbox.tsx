@@ -2,6 +2,7 @@ import type { CSSProperties } from 'react'
 import { createPortal } from 'react-dom'
 import type { ImageAsset, SiteData } from '../../types'
 import { useModal } from '../../hooks/useModal'
+import BasilIcon from '../common/BasilIcon'
 import styles from './PhotoLightbox.module.css'
 
 interface PhotoLightboxProps {
@@ -35,7 +36,7 @@ export default function PhotoLightbox({ image, labels, onClose }: PhotoLightboxP
           aria-label={labels.closePhoto}
           onClick={onClose}
         >
-          <span aria-hidden="true">×</span>
+          <BasilIcon name="cross" />
         </button>
         <figure className={styles.figure}>
           <img src={image.src} alt={image.alt} style={imageStyle} />

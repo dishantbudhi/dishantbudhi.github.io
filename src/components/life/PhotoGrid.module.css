@@ -32,6 +32,44 @@
   border-radius: 999px;
 }
 
+.dotNavigation {
+  padding-bottom: 0.2rem;
+  scrollbar-width: none;
+}
+
+.dotNavigation::-webkit-scrollbar {
+  display: none;
+}
+
+.indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 1.2rem;
+  margin-top: var(--spacing-md);
+}
+
+.indicator button {
+  width: 0.8rem;
+  height: 0.8rem;
+  padding: 0;
+  cursor: pointer;
+  background: color-mix(in srgb, var(--color-subtext) 42%, transparent);
+  border: 0;
+  border-radius: 999px;
+  transition: width 200ms ease, background-color 200ms ease, transform 200ms ease;
+}
+
+.indicator button:hover {
+  background: color-mix(in srgb, var(--color-accent) 68%, var(--color-subtext));
+  transform: scale(1.1);
+}
+
+.indicator .active {
+  width: 3.25rem;
+  background: var(--color-accent);
+}
+
 .item {
   position: relative;
   aspect-ratio: 1;

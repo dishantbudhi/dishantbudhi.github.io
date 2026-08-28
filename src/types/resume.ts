@@ -3,7 +3,9 @@ export interface ExperienceEntry {
   role: string
   team?: string
   dates: string
-  bullets: string[]
+  startDate: string
+  endDate?: string
+  href?: string
 }
 
 export interface ResumeData {

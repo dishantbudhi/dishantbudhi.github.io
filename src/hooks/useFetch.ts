@@ -22,7 +22,7 @@ export function useFetch<T>(url: string | null): FetchState<T> {
     const controller = new AbortController()
     setState({ data: null, loading: true, error: null })
 
-    fetch(url, { signal: controller.signal })
+    fetch(url, { signal: controller.signal, cache: 'no-store' })
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`)
         return res.json() as Promise<T>

@@ -12,6 +12,11 @@
   display: none;
 }
 
+.wrap {
+  flex-wrap: wrap;
+  overflow-x: visible;
+}
+
 .end {
   margin-left: auto;
 }

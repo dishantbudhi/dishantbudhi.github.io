@@ -1,5 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import './tokens.css';
+
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('/fonts/instrument-sans/InstrumentSans-Variable.woff2') format('woff2-variations');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Instrument Sans';
+  src: url('/fonts/instrument-sans/InstrumentSans-Italic-Variable.woff2') format('woff2-variations');
+  font-weight: 400 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/instrument-serif/InstrumentSerif-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Instrument Serif';
+  src: url('/fonts/instrument-serif/InstrumentSerif-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
 
 * {
   box-sizing: border-box;
@@ -9,9 +40,13 @@ html, body, #root {
   min-height: 100%;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  font-family: 'Inter', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+  font-family: 'Instrument Sans', ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   background: var(--color-bg);
   color: var(--color-text);
   line-height: 1.65;
@@ -63,7 +98,7 @@ a:hover {
 
 /* Global section spacing */
 .section {
-  padding-top: var(--spacing-xl);
+  padding-top: clamp(4rem, 8vw, 7rem);
 }
 
 .section--hero {
@@ -114,17 +149,49 @@ a:hover {
   height: 100%;
   min-width: 0;
   background: var(--color-surface);
-  border: 1px solid var(--color-muted);
+  border: 1px solid color-mix(in srgb, var(--color-muted) 78%, transparent);
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+  transition: background-color 180ms ease, box-shadow 180ms ease;
 }
 
 .interactiveCard:hover {
-  transform: translateY(-3px);
-  box-shadow: var(--shadow-elevated);
-  border-color: color-mix(in srgb, var(--color-accent) 42%, var(--color-muted));
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  opacity: 1;
+}
+
+[data-cursor-glow] {
+  --glow-x: 50%;
+  --glow-y: 50%;
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+[data-cursor-glow]::before {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  content: '';
+  pointer-events: none;
+  background: radial-gradient(
+    circle 9rem at var(--glow-x) var(--glow-y),
+    rgba(255, 255, 255, 0.035) 0%,
+    rgba(255, 255, 255, 0.016) 36%,
+    rgba(255, 255, 255, 0.006) 58%,
+    transparent 76%
+  );
+  opacity: 0;
+  transition: opacity 300ms ease;
+}
+
+[data-cursor-glow] > :not(iframe) {
+  z-index: 1;
+}
+
+[data-cursor-glow]:hover::before,
+[data-cursor-glow]:focus-within::before {
   opacity: 1;
 }
 
@@ -142,6 +209,10 @@ a:hover {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
   }
+
+  [data-cursor-glow]::before {
+    transition: opacity 120ms ease;
+  }
 }
 
 .sr-only {
@@ -157,8 +228,18 @@ a:hover {
 }
 
 /* Canvas background sits behind all content */
-#particle-canvas {
-  position: fixed;
-  inset: 0;
+#flare-canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
   z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0, 0, 0, 0.42) 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, #000 0%, #000 72%, rgba(0, 0, 0, 0.42) 90%, transparent 100%);
 }

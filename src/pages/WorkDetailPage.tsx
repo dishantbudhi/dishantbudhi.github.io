@@ -22,15 +22,15 @@ function WorkDetailContent({ slug, site }: { slug: string; site: SiteData }) {
     return (
       <div className="container">
         <p className="muted">{site.ui.projectNotFound}</p>
-        <Link to="/professional">{site.ui.backToProfessional}</Link>
+        <Link to="/#projects">Back</Link>
       </div>
     )
   }
 
   return (
     <DetailPage
-      backHref="/professional"
-      backLabel={site.ui.backToProfessional}
+      backHref="/#projects"
+      backLabel="Back"
       title={project.title}
       summary={project.summary}
       eyebrow={String(project.year)}
@@ -39,6 +39,7 @@ function WorkDetailContent({ slug, site }: { slug: string; site: SiteData }) {
       blocks={project.blocks}
       slug={project.slug}
       labels={site.ui}
+      layout="project"
     />
   )
 }

@@ -26,14 +26,14 @@ function LifeDetailContent({ slug, site }: { slug: string; site: SiteData }) {
     return (
       <div className="container">
         <p className="muted" style={{ padding: '48px 0' }}>{site.ui.interestNotFound}</p>
-        <Link to="/personal">{site.ui.backToPersonal}</Link>
+        <Link to="/professional#interests">{site.ui.backToPersonal}</Link>
       </div>
     )
   }
 
   return (
     <DetailPage
-      backHref="/personal"
+      backHref="/professional#interests"
       backLabel={site.ui.backToPersonal}
       title={hobby.title}
       summary={hobby.summary}

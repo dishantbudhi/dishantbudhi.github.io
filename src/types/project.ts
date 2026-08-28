@@ -7,6 +7,7 @@ export interface ProjectMeta {
   year: number
   tags: string[]
   summary: string
+  githubHref: string
   previewImage: ImageAsset
   detailImages: ImageAsset[]
 }
