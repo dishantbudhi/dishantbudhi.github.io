@@ -4,19 +4,18 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: var(--spacing-md);
 }
 
 .card {
   position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: auto minmax(2rem, 1fr) auto;
-  gap: var(--spacing-md);
-  align-items: start;
-  min-height: clamp(15rem, 22vw, 19rem);
-  padding: clamp(1.5rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  min-height: clamp(14rem, 19vw, 17rem);
+  padding: clamp(1.5rem, 2.4vw, 2.2rem);
   color: var(--color-text);
   background: var(--color-surface);
   border: 1px solid color-mix(in srgb, var(--color-muted) 82%, transparent);
@@ -31,22 +30,34 @@
 }
 
 .email {
-  grid-column: span 2;
+  grid-column: span 7;
+}
+
+.linkedin {
+  grid-column: span 5;
+}
+
+.github {
+  grid-column: span 5;
 }
 
 .resume {
-  grid-column: 1 / -1;
-  grid-template-columns: auto minmax(0, 1fr);
-  grid-template-rows: minmax(0, 1fr);
-  align-items: center;
-  min-height: clamp(12rem, 18vw, 15rem);
+  grid-column: span 7;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
 }
 
 .symbol {
   display: grid;
   place-items: center;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 4rem;
+  height: 4rem;
+  flex: 0 0 auto;
   color: var(--color-text);
   font-size: 1.8rem;
   font-weight: 750;
@@ -55,34 +66,39 @@
 }
 
 .copy {
-  align-self: end;
   min-width: 0;
-}
-
-.resume .copy {
-  align-self: center;
 }
 
 .copy strong {
   display: block;
-  font-size: clamp(1.3rem, 2.3vw, 1.85rem);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
   font-weight: 400;
 }
 
 .copy p {
-  overflow-wrap: anywhere;
   margin: 0.35rem 0 0;
   color: var(--color-subtext);
-  font-size: clamp(0.95rem, 1.6vw, 1.12rem);
+  font-size: clamp(0.95rem, 1.15vw, 1.08rem);
+  overflow-wrap: break-word;
+}
+
+.arrowFrame {
+  display: grid;
+  place-items: center;
+  width: 2.65rem;
+  height: 2.65rem;
+  flex: 0 0 auto;
+  color: var(--color-subtext);
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
 }
 
 .externalIcon {
-  position: absolute;
-  top: clamp(1.35rem, 2.5vw, 2.25rem);
-  right: clamp(1.35rem, 2.5vw, 2.25rem);
-  color: var(--color-subtext);
-  font-size: 1.45rem;
-  transition: transform 180ms ease, color 180ms ease;
+  width: 1.25rem;
+  height: 1.25rem;
+  transition: transform 220ms ease;
 }
 
 .diagonalArrow {
@@ -93,8 +109,10 @@
   transform: rotate(180deg);
 }
 
-.card:hover .externalIcon {
+.card:hover .arrowFrame {
   color: var(--color-accent);
+  background: color-mix(in srgb, var(--color-accent) 9%, transparent);
+  border-color: color-mix(in srgb, var(--color-accent) 24%, transparent);
 }
 
 .card:hover .diagonalArrow {
@@ -110,9 +128,12 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .card,
   .email,
+  .linkedin,
+  .github,
   .resume {
-    grid-column: 1 / -1;
+    grid-column: span 1;
   }
 }
 
@@ -130,11 +151,15 @@
   }
 
   .resume {
-    grid-template-columns: auto minmax(0, 1fr);
+    grid-column: auto;
   }
 
   .symbol {
     width: 3.75rem;
     height: 3.75rem;
+  }
+
+  .copy p {
+    overflow-wrap: anywhere;
   }
 }

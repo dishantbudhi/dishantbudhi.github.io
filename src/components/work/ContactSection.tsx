@@ -23,17 +23,21 @@ export default function ContactSection({ data }: ContactSectionProps) {
             rel={link.external ? 'noreferrer' : undefined}
             download={link.download || undefined}
           >
-            <span className={styles.symbol} aria-hidden="true">
-              <BasilIcon name={contactIconById[link.id] ?? 'arrowUp'} />
-            </span>
+            <div className={styles.cardHeader}>
+              <span className={styles.symbol} aria-hidden="true">
+                <BasilIcon name={contactIconById[link.id] ?? 'arrowUp'} />
+              </span>
+              <span className={styles.arrowFrame} aria-hidden="true">
+                <BasilIcon
+                  name="arrowUp"
+                  className={`${styles.externalIcon} ${link.id === 'resume' ? styles.downloadArrow : styles.diagonalArrow}`}
+                />
+              </span>
+            </div>
             <div className={styles.copy}>
               <strong>{link.label}</strong>
               <p>{link.description}</p>
             </div>
-            <BasilIcon
-              name="arrowUp"
-              className={`${styles.externalIcon} ${link.id === 'resume' ? styles.downloadArrow : styles.diagonalArrow}`}
-            />
           </a>
         ))}
       </div>

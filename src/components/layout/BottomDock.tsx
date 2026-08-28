@@ -36,16 +36,17 @@ export default function BottomDock({ items, visible }: BottomDockProps) {
   return (
     <nav className={`${styles.dock} ${visible ? styles.visible : ''}`} aria-label="Page sections">
       {items.map((item) => (
-        <a
-          key={item.id}
-          href={item.href}
-          className={`${styles.item} ${activeId === item.id ? styles.active : ''}`}
-          aria-label={item.label}
-          aria-current={activeId === item.id ? 'location' : undefined}
-          title={item.label}
-        >
-          <BasilIcon name={item.icon} />
-        </a>
+        <span className={styles.itemSlot} key={item.id}>
+          <a
+            href={item.href}
+            className={`${styles.item} ${activeId === item.id ? styles.active : ''}`}
+            aria-label={item.label}
+            aria-current={activeId === item.id ? 'location' : undefined}
+            title={item.label}
+          >
+            <BasilIcon name={item.icon} />
+          </a>
+        </span>
       ))}
     </nav>
   )
