@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import type { SiteData } from '../../types'
-import BasilIcon, { contactIconById } from '../common/BasilIcon'
+import BasilIcon, { contactIconById } from '../ui/BasilIcon'
 import BottomDock from './BottomDock'
 import styles from './NavBar.module.css'
 
@@ -11,7 +11,7 @@ export default function NavBar({ site }: { site: SiteData }) {
   const [isCompact, setIsCompact] = useState(
     () => !isLandingPage || window.scrollY > 32,
   )
-  const headerLinks = [...site.professional.contact.links]
+  const headerLinks = [...site.home.contact.links]
     .filter((link) => link.headerOrder !== undefined)
     .sort((a, b) => (a.headerOrder ?? 0) - (b.headerOrder ?? 0))
 
@@ -32,15 +32,15 @@ export default function NavBar({ site }: { site: SiteData }) {
           <div className={styles.inner}>
             <div className={styles.heroCopy}>
               <h1 className={styles.title}>
-                <span className={styles.greeting}>{site.professional.hero.greeting}</span>
+                <span className={styles.greeting}>{site.home.hero.greeting}</span>
                 <span className={styles.identity}><span className={styles.im}>I’m</span><em>{site.profile.name}</em></span>
               </h1>
               <div className={styles.ctaRow}>
-                <a className={styles.primaryCta} href={site.professional.ctaHref}>
-                  <span>{site.professional.ctaLabel}</span>
+                <a className={styles.primaryCta} href={site.home.ctaHref}>
+                  <span>{site.home.ctaLabel}</span>
                 </a>
-                <a className={styles.secondaryCta} href={site.professional.hero.workHref}>
-                  <span>{site.professional.hero.workLabel}</span>
+                <a className={styles.secondaryCta} href={site.home.hero.workHref}>
+                  <span>{site.home.hero.workLabel}</span>
                 </a>
               </div>
               <div className={styles.socialLinks} aria-label="Profile links">

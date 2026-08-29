@@ -6,10 +6,6 @@
     "mapsHref": "https://www.google.com/maps/dir/?api=1&destination=360%20Huntington%20Ave%2C%20Boston%2C%20MA%2002115",
     "mapEmbedHref": "https://www.openstreetmap.org/export/embed.html?bbox=-71.0965%2C42.3353%2C-71.0817%2C42.3447&layer=mapnik&marker=42.3398%2C-71.0892"
   },
-  "brand": {
-    "professionalLogo": "/files/db-professional.png",
-    "alt": "dB logo"
-  },
   "dockNavigation": [
     { "id": "home", "label": "Home", "href": "#home", "icon": "home" },
     { "id": "profile", "label": "Profile", "href": "#profile", "icon": "user" },
@@ -17,18 +13,16 @@
     { "id": "skills", "label": "Skills", "href": "#skills", "icon": "stack" },
     { "id": "contact", "label": "Contact", "href": "#contact", "icon": "plus" }
   ],
-  "professional": {
+  "home": {
     "hero": {
       "greeting": "Hey there,",
       "workLabel": "See my work",
       "workHref": "#projects"
     },
     "headline": "Curious. Analytical. Grounded.",
-    "intro": "CS and Business student at Northeastern, focused on the intersection of technology and product strategy.",
     "ctaLabel": "Get in touch",
     "ctaHref": "#contact",
     "experienceLabel": "EXPERIENCE",
-    "projectsLabel": "PROJECTS",
     "projectsGithubHref": "https://github.com/dishantbudhi?tab=repositories",
     "profileHeading": {
       "label": "PROFILE",
@@ -60,42 +54,46 @@
         {
           "title": "Languages",
           "items": [
-            { "name": "Python", "icon": "https://cdn.simpleicons.org/python" },
-            { "name": "TypeScript", "icon": "https://cdn.simpleicons.org/typescript" },
-            { "name": "JavaScript", "icon": "https://cdn.simpleicons.org/javascript" },
-            { "name": "Java", "icon": "https://cdn.simpleicons.org/openjdk/F0F2F5" },
-            { "name": "SQL", "icon": "https://cdn.simpleicons.org/mysql" },
-            { "name": "HTML/CSS", "icon": "https://cdn.simpleicons.org/html5" }
+            { "name": "Python", "icon": "/assets/icons/skills/python.svg" },
+            { "name": "TypeScript", "icon": "/assets/icons/skills/typescript.svg" },
+            { "name": "JavaScript", "icon": "/assets/icons/skills/javascript.svg" },
+            { "name": "Java", "icon": "/assets/icons/skills/java.svg" },
+            { "name": "MySQL", "icon": "/assets/icons/skills/mysql.svg" },
+            {
+              "name": "HTML/CSS",
+              "icon": "/assets/icons/skills/html5.svg",
+              "hoverIcon": "/assets/icons/skills/css3.svg"
+            }
           ]
         },
         {
           "title": "Frameworks & Libraries",
           "items": [
-            { "name": "React", "icon": "https://cdn.simpleicons.org/react" },
-            { "name": "Node.js", "icon": "https://cdn.simpleicons.org/nodedotjs" },
-            { "name": "Express", "icon": "https://cdn.simpleicons.org/express/F0F2F5" },
-            { "name": "Flask", "icon": "https://cdn.simpleicons.org/flask/F0F2F5" },
-            { "name": "Jest", "icon": "https://cdn.simpleicons.org/jest" },
-            { "name": "Cypress", "icon": "https://cdn.simpleicons.org/cypress" }
+            { "name": "React", "icon": "/assets/icons/skills/react.svg" },
+            { "name": "Node.js", "icon": "/assets/icons/skills/nodejs.svg" },
+            { "name": "Express", "icon": "/assets/icons/skills/express.svg" },
+            { "name": "Flask", "icon": "/assets/icons/skills/flask.svg" },
+            { "name": "Jest", "icon": "/assets/icons/skills/jest.svg" },
+            { "name": "Cypress", "icon": "/assets/icons/skills/cypress.svg" }
           ]
         },
         {
           "title": "Developer Tools",
           "items": [
-            { "name": "Docker", "icon": "https://cdn.simpleicons.org/docker" },
-            { "name": "Git", "icon": "https://cdn.simpleicons.org/git" },
-            { "name": "MongoDB", "icon": "https://cdn.simpleicons.org/mongodb" },
-            { "name": "Databricks", "icon": "https://cdn.simpleicons.org/databricks" }
+            { "name": "Docker", "icon": "/assets/icons/skills/docker.svg" },
+            { "name": "Git", "icon": "/assets/icons/skills/git.svg" },
+            { "name": "MongoDB", "icon": "/assets/icons/skills/mongodb.svg" },
+            { "name": "Databricks", "icon": "/assets/icons/skills/databricks.svg" }
           ]
         },
         {
           "title": "Product & Design Tools",
           "items": [
-            { "name": "Jira", "icon": "https://cdn.simpleicons.org/jira" },
-            { "name": "Confluence", "icon": "https://cdn.simpleicons.org/confluence" },
-            { "name": "Figma", "icon": "https://cdn.simpleicons.org/figma" },
-            { "name": "SharePoint", "icon": "/icons/basil/sharepoint.svg" },
-            { "name": "Excel", "icon": "/icons/basil/spreadsheet.svg" }
+            { "name": "Jira", "icon": "/assets/icons/skills/jira.svg" },
+            { "name": "Confluence", "icon": "/assets/icons/skills/confluence.svg" },
+            { "name": "Figma", "icon": "/assets/icons/skills/figma.svg" },
+            { "name": "SharePoint", "icon": "/assets/icons/skills/sharepoint.svg" },
+            { "name": "Excel", "icon": "/assets/icons/skills/excel.svg" }
           ]
         }
       ]
@@ -111,7 +109,6 @@
           "label": "Email Me",
           "description": "budhi.d@northeastern.edu",
           "href": "mailto:budhi.d@northeastern.edu",
-          "symbol": "@",
           "headerOrder": 3
         },
         {
@@ -119,7 +116,6 @@
           "label": "LinkedIn",
           "description": "@dishantbudhi",
           "href": "https://linkedin.com/in/dishantbudhi",
-          "symbol": "in",
           "external": true,
           "headerOrder": 1
         },
@@ -128,7 +124,6 @@
           "label": "GitHub",
           "description": "@dishantbudhi",
           "href": "https://github.com/dishantbudhi",
-          "symbol": "{}",
           "external": true,
           "headerOrder": 2
         },
@@ -137,60 +132,17 @@
           "label": "Download Resume",
           "description": "View my full experience and skills",
           "href": "/files/resume.pdf",
-          "symbol": "↓",
           "download": true,
           "headerOrder": 4
         }
       ]
     }
   },
-  "personal": {
-    "headline": "The things that shape me.",
-    "intro": "In my free time, I enjoy sports, history, music, film, the arts, and philosophy. These interests deepen my understanding of myself and the world around me.",
-    "interestsLabel": "INTERESTS",
-    "galleryLabel": "PHOTOS",
-    "galleryFallback": [
-      {
-        "src": "/files/interests.JPG",
-        "alt": "NBA Draft portrait",
-        "position": "center 28%",
-        "caption": "NBA Draft"
-      },
-      {
-        "src": "/files/headshot.png",
-        "alt": "Dishant Budhi portrait",
-        "position": "center 35%",
-        "caption": "Portrait"
-      },
-      {
-        "src": "/files/minilogo.png",
-        "alt": "Smiley graphic",
-        "position": "center",
-        "caption": "A small reminder to smile"
-      },
-      {
-        "src": "/files/interests.JPG",
-        "alt": "NBA Draft portrait detail",
-        "position": "center 38%",
-        "caption": "Draft day"
-      },
-      {
-        "src": "/files/headshot.png",
-        "alt": "Dishant Budhi portrait detail",
-        "position": "center 45%",
-        "caption": "Portrait detail"
-      }
-    ]
-  },
   "ui": {
     "loading": "Loading...",
     "experienceError": "Failed to load experience.",
     "projectsError": "Failed to load projects.",
-    "interestsError": "Failed to load interests.",
-    "interestNotFound": "Interest not found.",
     "projectNotFound": "Project not found.",
-    "backToPersonal": "← Back to interests",
-    "backToProfessional": "← Back to Professional",
     "photoDialogLabel": "Photo viewer",
     "closePhoto": "Close photo viewer"
   },

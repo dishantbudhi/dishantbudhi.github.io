@@ -6,27 +6,19 @@
   --color-subtext: #9ba2ad;
   --color-accent: #1d6ff4;
   --color-muted: #303640;
-  --color-surface-muted: #14181d;
   --color-preview-start: #20252c;
   --color-preview-end: #15191e;
-  --header-bg-strong: rgba(18, 18, 18, 0.9);
-  --header-bg-soft: rgba(18, 18, 18, 0.55);
-  --header-bg-clear: rgba(18, 18, 18, 0);
-  --overlay-bg: rgba(12, 14, 18, 0.82);
 
   /* Layout */
   --container-max: 74rem;
   --content-gutter: clamp(1.25rem, 5vw, 4rem);
 
   /* Shape */
-  --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
   --radius-lg: 1.25rem;
-  --radius-xl: 1.5rem;
 
   /* Elevation */
   --shadow-soft: 0 1px 0 rgba(255, 255, 255, 0.015);
-  --shadow-elevated: 0 14px 35px rgba(0, 0, 0, 0.2);
 
   /* Spacing */
   --spacing-xs: clamp(0.4rem, 0.7vw, 0.5rem);
@@ -39,27 +31,7 @@
   /* Typography */
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
   --font-size-lg: clamp(1.05rem, 1.8vw, 1.125rem);
   --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
   --font-size-display: clamp(2rem, 5vw, 3.5rem);
-}
-
-:root[data-theme='personal'] {
-  --color-bg: #e6edf4;
-  --color-surface: #f7f9fc;
-  --color-text: #172333;
-  --color-subtext: #607086;
-  --color-accent: #1d6ff4;
-  --color-muted: #c4cfdb;
-  --color-surface-muted: #d8e2ec;
-  --color-preview-start: #f7f9fc;
-  --color-preview-end: #d4dfe9;
-  --header-bg-strong: rgba(230, 237, 244, 0.92);
-  --header-bg-soft: rgba(230, 237, 244, 0.56);
-  --header-bg-clear: rgba(230, 237, 244, 0);
-  --overlay-bg: rgba(247, 249, 252, 0.82);
-  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.1);
-  --shadow-elevated: 0 15px 40px rgba(0, 0, 0, 0.16);
 }

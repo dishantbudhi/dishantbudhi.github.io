@@ -1,5 +1,3 @@
-import type { ImageAsset } from './media'
-
 export interface DockNavigationItem {
   id: string
   label: string
@@ -10,6 +8,7 @@ export interface DockNavigationItem {
 export interface SkillItem {
   name: string
   icon?: string
+  hoverIcon?: string
 }
 
 export interface SkillCategory {
@@ -28,9 +27,9 @@ export interface ContactLink {
   label: string
   description: string
   href: string
-  symbol: string
   external?: boolean
   download?: boolean
+  headerOrder?: number
 }
 
 export interface SiteData {
@@ -41,23 +40,17 @@ export interface SiteData {
     mapsHref: string
     mapEmbedHref: string
   }
-  brand: {
-    professionalLogo: string
-    alt: string
-  }
   dockNavigation: DockNavigationItem[]
-  professional: {
+  home: {
     hero: {
       greeting: string
       workLabel: string
       workHref: string
     }
     headline: string
-    intro: string
     ctaLabel: string
     ctaHref: string
     experienceLabel: string
-    projectsLabel: string
     projectsGithubHref: string
     profileHeading: EditorialHeadingData
     projectsHeading: EditorialHeadingData
@@ -74,22 +67,11 @@ export interface SiteData {
       links: ContactLink[]
     }
   }
-  personal: {
-    headline: string
-    intro: string
-    interestsLabel: string
-    galleryLabel: string
-    galleryFallback: ImageAsset[]
-  }
   ui: {
     loading: string
     experienceError: string
     projectsError: string
-    interestsError: string
-    interestNotFound: string
     projectNotFound: string
-    backToPersonal: string
-    backToProfessional: string
     photoDialogLabel: string
     closePhoto: string
   }

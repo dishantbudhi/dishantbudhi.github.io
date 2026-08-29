@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import type { DockNavigationItem } from '../../types'
-import BasilIcon from '../common/BasilIcon'
+import BasilIcon from '../ui/BasilIcon'
 import styles from './BottomDock.module.css'
 
 interface BottomDockProps {
@@ -10,6 +10,20 @@ interface BottomDockProps {
 
 export default function BottomDock({ items, visible }: BottomDockProps) {
   const [activeId, setActiveId] = useState(items[0]?.id ?? 'top')
+  const [footerVisible, setFooterVisible] = useState(false)
+
+  useEffect(() => {
+    const footer = document.getElementById('footer')
+    if (!footer) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => setFooterVisible(entry.isIntersecting),
+      { threshold: 0 },
+    )
+
+    observer.observe(footer)
+    return () => observer.disconnect()
+  }, [])
 
   useEffect(() => {
     function updateActiveSection() {
@@ -33,8 +47,14 @@ export default function BottomDock({ items, visible }: BottomDockProps) {
     }
   }, [items])
 
+  const showDock = visible && !footerVisible
+
   return (
-    <nav className={`${styles.dock} ${visible ? styles.visible : ''}`} aria-label="Page sections">
+    <nav
+      className={`${styles.dock} ${showDock ? styles.visible : ''}`}
+      aria-label="Page sections"
+      aria-hidden={!showDock}
+    >
       {items.map((item) => (
         <span className={styles.itemSlot} key={item.id}>
           <a
@@ -43,6 +63,7 @@ export default function BottomDock({ items, visible }: BottomDockProps) {
             aria-label={item.label}
             aria-current={activeId === item.id ? 'location' : undefined}
             title={item.label}
+            tabIndex={showDock ? undefined : -1}
           >
             <BasilIcon name={item.icon} />
           </a>

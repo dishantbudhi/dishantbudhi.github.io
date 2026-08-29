@@ -1,59 +1,44 @@
-# Portfolio
+# Dishant Budhi — Portfolio
 
-Modern, responsive website showcasing my skills, experience, and projects.
+React and Vite portfolio for [dishantbudhi.com](https://dishantbudhi.com).
 
-## 🚀 Live Site
+## Editing content
 
-Visit my portfolio at: [dishantbudhi.com](https://dishantbudhi.com)
+Most site updates only require editing JSON in [`public/data`](./public/data):
 
-## 🛠️ Tech Stack
+- `site.json` — profile, navigation, skills, contact links, and footer copy
+- `resume.json` — experience entries
+- `projects.json` — project cards and project-detail content
 
-- **Frontend**: React
-- **Build Tool**: Vite
-- **Styling**: CSS
-- **Deployment**: GitHub Pages + Actions
+See [`public/data/README.md`](./public/data/README.md) for field-level guidance.
 
-## 📁 Project Structure
+## Project structure
 
-```
+```text
 src/
-├── components/     # React components
-├── data/          # Static data (experience, projects)
-├── hooks/         # Custom React hooks
-└── styles/        # Global styles
+├── components/
+│   ├── home/       # Home-page sections
+│   ├── layout/     # Hero, navigation, background, and footer
+│   ├── projects/   # Project cards, carousel, gallery, and detail view
+│   └── ui/         # Reusable UI primitives
+├── config/         # Content file locations
+├── hooks/          # Shared React behavior
+├── pages/          # Route-level components
+├── styles/         # Design tokens and global styles
+└── types/          # JSON and component data contracts
 ```
 
-## 🚀 Getting Started
+## Development
 
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/dishantbudhi/dishantbudhi.github.io.git
-   cd dishantbudhi.github.io
-   ```
+```bash
+npm install
+npm run dev
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+Before publishing changes:
 
-3. **Start development server**
-   ```bash
-   npm run dev
-   ```
+```bash
+npm run check
+```
 
-4. **Build for production**
-   ```bash
-   npm run build
-   ```
-
-## 📝 Features
-
-- Responsive design
-- Smooth scroll animations
-- Interactive particle canvas
-- Component-based architecture
-- Automatic deployment via GitHub Actions
-
-## 📄 License
-
-© 2025 Dishant Budhi. All rights reserved.
+The site is deployed through GitHub Pages and Actions.

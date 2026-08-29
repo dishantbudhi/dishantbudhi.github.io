@@ -1,22 +1,18 @@
 import './styles/global.css'
-import { useEffect } from 'react'
 import { Routes, Route, Navigate } from 'react-router-dom'
 import FlareCanvas from './components/layout/FlareCanvas'
 import NavBar from './components/layout/NavBar'
-import Footer from './components/Footer'
-import WorkPage from './pages/WorkPage'
-import WorkDetailPage from './pages/WorkDetailPage'
-import { useFetch } from './hooks/useFetch'
+import Footer from './components/layout/Footer'
+import HomePage from './pages/HomePage'
+import ProjectPage from './pages/ProjectPage'
+import { useJsonData } from './hooks/useJsonData'
 import { useCursorGlow } from './hooks/useCursorGlow'
+import { contentPaths } from './config/content'
 import type { SiteData } from './types'
 
 export default function App() {
   useCursorGlow()
-  const { data: site } = useFetch<SiteData>('/data/site.json')
-
-  useEffect(() => {
-    document.documentElement.dataset.theme = 'professional'
-  }, [])
+  const { data: site } = useJsonData<SiteData>(contentPaths.site)
 
   return (
     <>
@@ -24,8 +20,8 @@ export default function App() {
       {site && <NavBar site={site} />}
       <main>
         <Routes>
-          <Route path="/" element={site ? <WorkPage site={site} /> : null} />
-          <Route path="/projects/:slug" element={site ? <WorkDetailPage site={site} /> : null} />
+          <Route path="/" element={site ? <HomePage site={site} /> : null} />
+          <Route path="/projects/:slug" element={site ? <ProjectPage site={site} /> : null} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </main>

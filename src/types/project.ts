@@ -1,17 +1,14 @@
-import type { ContentBlock } from './blocks'
 import type { ImageAsset } from './media'
 
-export interface ProjectMeta {
+export interface ProjectSection {
+  content: string
+}
+
+export interface ProjectFull {
   slug: string
   title: string
   year: number
-  tags: string[]
-  summary: string
   githubHref: string
-  previewImage: ImageAsset
   detailImages: ImageAsset[]
-}
-
-export interface ProjectFull extends ProjectMeta {
-  blocks: ContentBlock[]
+  sections: ProjectSection[]
 }

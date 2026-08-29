@@ -1,0 +1,60 @@
+.carousel {
+  min-width: 0;
+}
+
+.track {
+  display: flex;
+  gap: var(--spacing-md);
+  padding: 0.2rem 0 1.2rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-behavior: smooth;
+  scroll-snap-type: inline mandatory;
+  scrollbar-width: none;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.track > * {
+  flex: 0 0 clamp(19rem, 48vw, 36rem);
+  aspect-ratio: 16 / 9;
+  scroll-snap-align: start;
+}
+
+.indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 1.2rem;
+  margin-top: var(--spacing-sm);
+}
+
+.indicator button {
+  width: 0.8rem;
+  height: 0.8rem;
+  padding: 0;
+  cursor: pointer;
+  background: color-mix(in srgb, var(--color-subtext) 42%, transparent);
+  border: 0;
+  border-radius: 999px;
+  transition: width 200ms ease, background-color 200ms ease, transform 200ms ease;
+}
+
+.indicator button:hover {
+  background: color-mix(in srgb, var(--color-accent) 68%, var(--color-subtext));
+  transform: scale(1.1);
+}
+
+.indicator .active {
+  width: 3.25rem;
+  background: var(--color-accent);
+}
+
+@media (max-width: 640px) {
+  .track > * {
+    flex-basis: calc(100vw - 3.5rem);
+    aspect-ratio: auto;
+  }
+}
