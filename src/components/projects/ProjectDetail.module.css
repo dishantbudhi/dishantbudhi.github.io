@@ -82,19 +82,24 @@
 
 .stackTile {
   display: grid;
-  grid-column: 1 / -1;
   align-content: start;
   gap: var(--spacing-lg);
   min-height: 9rem;
 }
 
+.bottomGrid {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1fr) clamp(15rem, 24vw, 19rem);
+  gap: clamp(0.9rem, 1.8vw, 1.25rem);
+}
+
 .tileLabel {
   margin: 0;
-  color: var(--color-subtext);
-  font-size: clamp(0.8rem, 1.5vw, 1rem);
-  font-weight: 450;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
+  color: var(--color-text);
+  font-size: var(--font-size-xl);
+  font-weight: 700;
+  letter-spacing: normal;
 }
 
 @media (max-width: 860px) {
@@ -105,5 +110,10 @@
   .wideTile,
   .stackTile {
     grid-column: auto;
+  }
+
+  .bottomGrid {
+    grid-column: auto;
+    grid-template-columns: minmax(0, 1fr);
   }
 }

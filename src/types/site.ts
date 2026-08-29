@@ -38,7 +38,7 @@ export interface SiteData {
     location: string
     address: string
     mapsHref: string
-    mapEmbedHref: string
+    mapImageSrc: string
   }
   dockNavigation: DockNavigationItem[]
   home: {

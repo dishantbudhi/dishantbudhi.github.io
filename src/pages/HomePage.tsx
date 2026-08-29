@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { useProjects } from '../hooks/useProjects'
 import { useJsonData } from '../hooks/useJsonData'
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll'
@@ -15,6 +16,7 @@ import styles from './HomePage.module.css'
 
 export default function HomePage({ site }: { site: SiteData }) {
   useRevealOnScroll()
+  const initialHashHandled = useRef(false)
   const { projects, loading: projectsLoading, error: projectsError } = useProjects()
   const {
     data: resume,
@@ -22,9 +24,23 @@ export default function HomePage({ site }: { site: SiteData }) {
     error: resumeError,
   } = useJsonData<ResumeData>(contentPaths.resume)
 
+  useEffect(() => {
+    if (initialHashHandled.current || projectsLoading || resumeLoading) return
+
+    const sectionId = window.location.hash.slice(1)
+    if (!sectionId) return
+
+    initialHashHandled.current = true
+    const animationFrame = window.requestAnimationFrame(() => {
+      document.getElementById(sectionId)?.scrollIntoView({ block: 'start' })
+    })
+
+    return () => window.cancelAnimationFrame(animationFrame)
+  }, [projectsLoading, resumeLoading])
+
   return (
     <>
-      <Section id="profile" reveal className={`${styles.sectionAnchor} ${styles.profileSection}`}>
+      <Section id="profile" reveal className={styles.profileSection}>
         <EditorialHeading data={site.home.profileHeading} />
         <div className={styles.profileGrid}>
           <article className={`${styles.profileCard} ${styles.experienceCard}`} data-cursor-glow>
@@ -34,13 +50,21 @@ export default function HomePage({ site }: { site: SiteData }) {
             {resume && <ResumeSection data={resume} />}
           </article>
 
+          <article className={`${styles.profileCard} ${styles.statementCard}`} data-cursor-glow>
+            <p>
+              {site.home.headline.split('.').filter(Boolean).map((line) => (
+                <span key={line}>{line.trim()}.</span>
+              ))}
+            </p>
+          </article>
+
           <article className={`${styles.profileCard} ${styles.locationCard}`} data-cursor-glow>
-            <iframe
+            <img
               className={styles.mapLayer}
-              src={site.profile.mapEmbedHref}
-              title="Map of Boston"
+              src={site.profile.mapImageSrc}
+              alt=""
               loading="lazy"
-              tabIndex={-1}
+              data-card-background
               aria-hidden="true"
             />
             <a
@@ -57,29 +81,22 @@ export default function HomePage({ site }: { site: SiteData }) {
               </p>
             </a>
           </article>
-
-          <article className={`${styles.profileCard} ${styles.statementCard}`} data-cursor-glow>
-            <p>
-              {site.home.headline.split('.').filter(Boolean).map((line) => (
-                <span key={line}>{line.trim()}.</span>
-              ))}
-            </p>
-          </article>
         </div>
 
         <div className={styles.lowerTileGrid}>
+          <article className={`${styles.profileCard} ${styles.focusCard}`} data-cursor-glow>
+            <p className={styles.cardLabel}>MISSION STATEMENT</p>
+            <p className={styles.focusStatement}>{site.home.focusStatement}</p>
+          </article>
+
           <article id="outside-work" className={`${styles.profileCard} ${styles.interestCard}`} data-cursor-glow>
             <p className={styles.cardLabel}>{site.home.alsoLikeLabel}</p>
             <RotatingInterest items={site.home.outsideInterests} />
           </article>
-
-          <article className={`${styles.profileCard} ${styles.focusCard}`} data-cursor-glow>
-            <p>{site.home.focusStatement}</p>
-          </article>
         </div>
       </Section>
 
-      <Section id="projects" reveal className={`${styles.sectionAnchor} ${styles.projectsSection}`}>
+      <Section id="projects" reveal className={styles.projectsSection}>
         <div className={styles.projectsHeader}>
           <EditorialHeading data={site.home.projectsHeading} className={styles.projectsHeading} />
           <a
@@ -96,7 +113,7 @@ export default function HomePage({ site }: { site: SiteData }) {
         {!projectsLoading && !projectsError && <ProjectGrid projects={projects} />}
       </Section>
 
-      <Section id="skills" reveal className={`${styles.sectionAnchor} ${styles.skillsSection}`}>
+      <Section id="skills" reveal className={styles.skillsSection}>
         <SkillsSection data={site.home.skills} />
       </Section>
 

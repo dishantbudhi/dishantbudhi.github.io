@@ -45,7 +45,7 @@
 }
 
 .source:hover {
-  color: var(--color-subtext);
+  color: var(--color-accent);
   opacity: 1;
   transform: translateY(-1px);
 }

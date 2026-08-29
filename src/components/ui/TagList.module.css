@@ -16,13 +16,3 @@
   flex-wrap: wrap;
   overflow-x: visible;
 }
-
-.end {
-  margin-left: auto;
-}
-
-@media (max-width: 640px) {
-  .end {
-    margin-left: 0;
-  }
-}

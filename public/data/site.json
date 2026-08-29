@@ -3,8 +3,8 @@
     "name": "Dishant Budhi",
     "location": "Boston, MA",
     "address": "360 Huntington Ave, Boston, MA 02115",
-    "mapsHref": "https://www.google.com/maps/dir/?api=1&destination=360%20Huntington%20Ave%2C%20Boston%2C%20MA%2002115",
-    "mapEmbedHref": "https://www.openstreetmap.org/export/embed.html?bbox=-71.0965%2C42.3353%2C-71.0817%2C42.3447&layer=mapnik&marker=42.3398%2C-71.0892"
+    "mapsHref": "https://www.google.com/maps/dir/40.5757847,-74.349813/Richards+Hall,+360+Huntington+Ave+%23354+Boston,+MA+02115/@41.418315,-75.3482001,630275m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89e37a18f4247cb1:0x4dc0e0b5547caf2d!2m2!1d-71.0887412!2d42.3399151?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
+    "mapImageSrc": "/files/misc/boston.png"
   },
   "dockNavigation": [
     { "id": "home", "label": "Home", "href": "#home", "icon": "home" },
@@ -19,7 +19,7 @@
       "workLabel": "See my work",
       "workHref": "#projects"
     },
-    "headline": "Curious. Analytical. Grounded.",
+    "headline": "Curious. Adaptable. Intentional.",
     "ctaLabel": "Get in touch",
     "ctaHref": "#contact",
     "experienceLabel": "EXPERIENCE",
@@ -29,8 +29,8 @@
       "title": "About Me"
     },
     "projectsHeading": {
-      "label": "WHAT I'VE BUILT",
-      "title": "Projects"
+      "label": "WORK",
+      "title": "Featured Projects"
     },
     "alsoLikeLabel": "OUTSIDE OF WORK",
     "outsideInterests": [
@@ -46,54 +46,54 @@
       { "label": "Cooking", "icon": "fire" },
       { "label": "Technology", "icon": "processor" }
     ],
-    "focusStatement": "I build thoughtful products around real user needs.",
+    "focusStatement": "I turn real needs into practical solutions.",
     "skills": {
-      "label": "WHAT I WORK WITH",
-      "title": "Skills",
+      "label": "EXPERTISE",
+      "title": "My Skills",
       "categories": [
         {
           "title": "Languages",
           "items": [
-            { "name": "Python", "icon": "/assets/icons/skills/python.svg" },
-            { "name": "TypeScript", "icon": "/assets/icons/skills/typescript.svg" },
-            { "name": "JavaScript", "icon": "/assets/icons/skills/javascript.svg" },
-            { "name": "Java", "icon": "/assets/icons/skills/java.svg" },
-            { "name": "MySQL", "icon": "/assets/icons/skills/mysql.svg" },
+            { "name": "Python", "icon": "/files/admin/skills/python.svg" },
+            { "name": "TypeScript", "icon": "/files/admin/skills/typescript.svg" },
+            { "name": "JavaScript", "icon": "/files/admin/skills/javascript.svg" },
+            { "name": "Java", "icon": "/files/admin/skills/java.svg" },
+            { "name": "MySQL", "icon": "/files/admin/skills/mysql.svg" },
             {
               "name": "HTML/CSS",
-              "icon": "/assets/icons/skills/html5.svg",
-              "hoverIcon": "/assets/icons/skills/css3.svg"
+              "icon": "/files/admin/skills/html5.svg",
+              "hoverIcon": "/files/admin/skills/css3.svg"
             }
           ]
         },
         {
           "title": "Frameworks & Libraries",
           "items": [
-            { "name": "React", "icon": "/assets/icons/skills/react.svg" },
-            { "name": "Node.js", "icon": "/assets/icons/skills/nodejs.svg" },
-            { "name": "Express", "icon": "/assets/icons/skills/express.svg" },
-            { "name": "Flask", "icon": "/assets/icons/skills/flask.svg" },
-            { "name": "Jest", "icon": "/assets/icons/skills/jest.svg" },
-            { "name": "Cypress", "icon": "/assets/icons/skills/cypress.svg" }
+            { "name": "React", "icon": "/files/admin/skills/react.svg" },
+            { "name": "Node.js", "icon": "/files/admin/skills/nodejs.svg" },
+            { "name": "Express", "icon": "/files/admin/skills/express.svg" },
+            { "name": "Flask", "icon": "/files/admin/skills/flask.svg" },
+            { "name": "Jest", "icon": "/files/admin/skills/jest.svg" },
+            { "name": "Cypress", "icon": "/files/admin/skills/cypress.svg" }
           ]
         },
         {
           "title": "Developer Tools",
           "items": [
-            { "name": "Docker", "icon": "/assets/icons/skills/docker.svg" },
-            { "name": "Git", "icon": "/assets/icons/skills/git.svg" },
-            { "name": "MongoDB", "icon": "/assets/icons/skills/mongodb.svg" },
-            { "name": "Databricks", "icon": "/assets/icons/skills/databricks.svg" }
+            { "name": "Docker", "icon": "/files/admin/skills/docker.svg" },
+            { "name": "Git", "icon": "/files/admin/skills/git.svg" },
+            { "name": "MongoDB", "icon": "/files/admin/skills/mongodb.svg" },
+            { "name": "Databricks", "icon": "/files/admin/skills/databricks.svg" }
           ]
         },
         {
           "title": "Product & Design Tools",
           "items": [
-            { "name": "Jira", "icon": "/assets/icons/skills/jira.svg" },
-            { "name": "Confluence", "icon": "/assets/icons/skills/confluence.svg" },
-            { "name": "Figma", "icon": "/assets/icons/skills/figma.svg" },
-            { "name": "SharePoint", "icon": "/assets/icons/skills/sharepoint.svg" },
-            { "name": "Excel", "icon": "/assets/icons/skills/excel.svg" }
+            { "name": "Jira", "icon": "/files/admin/skills/jira.svg" },
+            { "name": "Confluence", "icon": "/files/admin/skills/confluence.svg" },
+            { "name": "Figma", "icon": "/files/admin/skills/figma.svg" },
+            { "name": "SharePoint", "icon": "/files/admin/skills/sharepoint.svg" },
+            { "name": "Excel", "icon": "/files/admin/skills/excel.svg" }
           ]
         }
       ]
@@ -131,7 +131,7 @@
           "id": "resume",
           "label": "Download Resume",
           "description": "View my full experience and skills",
-          "href": "/files/resume.pdf",
+          "href": "/files/misc/resume.pdf",
           "download": true,
           "headerOrder": 4
         }
@@ -150,6 +150,6 @@
     "copyright": "© 2026 Dishant Budhi. All rights reserved.",
     "sourceLabel": "Check out the code for this site",
     "sourceHref": "https://github.com/dishantbudhi/dishantbudhi.github.io",
-    "backToTopLabel": "Back to top"
+    "backToTopLabel": "Back to Top"
   }
 }

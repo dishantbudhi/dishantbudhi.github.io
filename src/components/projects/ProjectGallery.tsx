@@ -1,6 +1,7 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 import type { CSSProperties } from 'react'
 import type { ImageAsset, SiteData } from '../../types'
+import { useHorizontalCarousel } from '../../hooks/useHorizontalCarousel'
 import ProjectLightbox from './ProjectLightbox'
 import styles from './ProjectGallery.module.css'
 
@@ -10,35 +11,19 @@ interface ProjectGalleryProps {
 }
 
 export default function ProjectGallery({ images, labels }: ProjectGalleryProps) {
-  const trackRef = useRef<HTMLDivElement>(null)
-  const [selectedImage, setSelectedImage] = useState<ImageAsset | null>(null)
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
   const [failedImages, setFailedImages] = useState<Set<number>>(() => new Set())
-  const [activeIndex, setActiveIndex] = useState(0)
-
-  const updateActiveIndex = () => {
-    const track = trackRef.current
-    if (!track || track.children.length === 0) return
-
-    const closestIndex = Array.from(track.children).reduce((closest, child, index) => {
-      const distance = Math.abs((child as HTMLElement).offsetLeft - track.scrollLeft)
-      const closestDistance = Math.abs((track.children[closest] as HTMLElement).offsetLeft - track.scrollLeft)
-      return distance < closestDistance ? index : closest
-    }, 0)
-
-    setActiveIndex(closestIndex)
-  }
-
-  const scrollToImage = (index: number) => {
-    const image = trackRef.current?.children[index] as HTMLElement | undefined
-    image?.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' })
-  }
+  const { trackRef, activeIndex, updateActiveIndex, scrollToItem } = useHorizontalCarousel()
 
   return (
     <>
       <div ref={trackRef} className={styles.track} onScroll={updateActiveIndex}>
         {images.map((image, index) => {
           const imageFailed = failedImages.has(index)
-          const imageStyle = { '--image-position': image.position ?? 'center' } as CSSProperties
+          const imageStyle = {
+            '--image-position': image.position ?? 'center',
+            '--image-fit': image.fit ?? 'cover',
+          } as CSSProperties
 
           return (
             <button
@@ -47,7 +32,7 @@ export default function ProjectGallery({ images, labels }: ProjectGalleryProps) 
               className={styles.item}
               aria-label={image.alt}
               disabled={imageFailed}
-              onClick={() => !imageFailed && setSelectedImage(image)}
+              onClick={() => !imageFailed && setSelectedIndex(index)}
             >
               {imageFailed ? (
                 <span className={styles.placeholder}>
@@ -74,7 +59,7 @@ export default function ProjectGallery({ images, labels }: ProjectGalleryProps) 
               key={`${image.src}-indicator-${index}`}
               type="button"
               className={index === activeIndex ? styles.active : ''}
-              onClick={() => scrollToImage(index)}
+              onClick={() => scrollToItem(index)}
               aria-label={`Show image ${index + 1}`}
               aria-current={index === activeIndex ? 'true' : undefined}
             />
@@ -82,7 +67,13 @@ export default function ProjectGallery({ images, labels }: ProjectGalleryProps) 
         </div>
       )}
 
-      <ProjectLightbox image={selectedImage} labels={labels} onClose={() => setSelectedImage(null)} />
+      <ProjectLightbox
+        images={images}
+        activeIndex={selectedIndex}
+        labels={labels}
+        onSelect={setSelectedIndex}
+        onClose={() => setSelectedIndex(null)}
+      />
     </>
   )
 }

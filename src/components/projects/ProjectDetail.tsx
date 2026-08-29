@@ -3,6 +3,7 @@ import type { ProjectFull, SiteData } from '../../types'
 import BasilIcon from '../ui/BasilIcon'
 import TagList from '../ui/TagList'
 import ProjectGallery from './ProjectGallery'
+import ProjectLinks from './ProjectLinks'
 import ProjectText from './ProjectText'
 import { getProjectStack, isProjectSection } from './projectContent'
 import styles from './ProjectDetail.module.css'
@@ -13,7 +14,9 @@ interface ProjectDetailProps {
 }
 
 export default function ProjectDetail({ project, labels }: ProjectDetailProps) {
-  const contentSections = project.sections.filter((section) => !isProjectSection(section, 'Stack'))
+  const contentSections = project.sections.filter(
+    (section) => !isProjectSection(section, 'Stack') && !isProjectSection(section, 'Links'),
+  )
   const stackItems = getProjectStack(project)
 
   return (
@@ -46,12 +49,15 @@ export default function ProjectDetail({ project, labels }: ProjectDetailProps) {
             </section>
           ))}
 
-          {stackItems.length > 0 && (
-            <section className={`${styles.projectTile} ${styles.stackTile}`} data-cursor-glow>
-              <p className={styles.tileLabel}>Stack</p>
-              <TagList tags={stackItems} wrap />
-            </section>
-          )}
+          <div className={styles.bottomGrid}>
+            {stackItems.length > 0 && (
+              <section className={`${styles.projectTile} ${styles.stackTile}`} data-cursor-glow>
+                <h2 className={styles.tileLabel}>Skills</h2>
+                <TagList tags={stackItems} wrap />
+              </section>
+            )}
+            <ProjectLinks project={project} />
+          </div>
         </div>
       </div>
     </article>

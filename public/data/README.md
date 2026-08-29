@@ -9,10 +9,11 @@ Edit `projects.json`. Each project contains:
 - `slug` — URL-safe identifier used in `/projects/{slug}`
 - `title` and `year` — shared by the card and detail page
 - `githubHref` — repository URL
-- `detailImages` — carousel images with `src`, `alt`, and optional `position`
+- `projectLink` — optional second link with `label` and `href`; it appears as a matching project-link card beside GitHub
+- `detailImages` — carousel images with `src`, `alt`, and optional `position`, `fit`, and `caption`
 - `sections` — detail-page tiles written in Markdown
 
-Use headings such as `## Overview`, `## What I Built`, and `## Stack`. Cards automatically use the Overview text as their description and the first three Stack entries as their tags, so those values never need to be duplicated.
+Use headings such as `## Overview`, `## What I Built`, and `## Stack`. Cards automatically use the Overview text as their description and the first three Stack entries as their tags, so those values never need to be duplicated. Do not add a Markdown Links section: GitHub and the optional `projectLink` are rendered as dedicated bento cards beside Stack.
 
 ## Edit experience
 

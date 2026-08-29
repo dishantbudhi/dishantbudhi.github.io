@@ -5,7 +5,6 @@ interface SectionProps {
   className?: string
   id?: string
   reveal?: boolean
-  variant?: 'default' | 'hero'
 }
 
 export default function Section({
@@ -13,11 +12,10 @@ export default function Section({
   className = '',
   id,
   reveal = false,
-  variant = 'default',
 }: SectionProps) {
   return (
-    <section id={id} className={`section section--${variant} ${className}`.trim()}>
-      <div className="container">
+    <section className={`section ${className}`.trim()}>
+      <div id={id} className="container">
         {reveal ? (
           <div className="reveal" data-reveal="">
             {children}

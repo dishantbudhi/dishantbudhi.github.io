@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, type MouseEvent } from 'react'
 import type { DockNavigationItem } from '../../types'
 import BasilIcon from '../ui/BasilIcon'
 import styles from './BottomDock.module.css'
@@ -49,6 +49,19 @@ export default function BottomDock({ items, visible }: BottomDockProps) {
 
   const showDock = visible && !footerVisible
 
+  function handleNavigation(event: MouseEvent<HTMLAnchorElement>, item: DockNavigationItem) {
+    const target = document.querySelector<HTMLElement>(item.href)
+    if (!target) return
+
+    event.preventDefault()
+    window.history.pushState(null, '', item.href)
+    target.scrollIntoView({
+      behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      block: 'start',
+    })
+    setActiveId(item.id)
+  }
+
   return (
     <nav
       className={`${styles.dock} ${showDock ? styles.visible : ''}`}
@@ -59,6 +72,7 @@ export default function BottomDock({ items, visible }: BottomDockProps) {
         <span className={styles.itemSlot} key={item.id}>
           <a
             href={item.href}
+            onClick={(event) => handleNavigation(event, item)}
             className={`${styles.item} ${activeId === item.id ? styles.active : ''}`}
             aria-label={item.label}
             aria-current={activeId === item.id ? 'location' : undefined}

@@ -4,6 +4,7 @@
 
 .track {
   display: flex;
+  align-items: stretch;
   gap: var(--spacing-md);
   padding: 0.2rem 0 1.2rem;
   overflow-x: auto;
@@ -18,8 +19,8 @@
 }
 
 .track > * {
-  flex: 0 0 clamp(19rem, 48vw, 36rem);
-  aspect-ratio: 16 / 9;
+  flex: 0 0 clamp(22rem, 52vw, 40rem);
+  height: auto;
   scroll-snap-align: start;
 }
 
@@ -54,7 +55,6 @@
 
 @media (max-width: 640px) {
   .track > * {
-    flex-basis: calc(100vw - 3.5rem);
-    aspect-ratio: auto;
+    flex-basis: 100%;
   }
 }

@@ -5,17 +5,17 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  gap: var(--spacing-md);
+  gap: var(--tile-gap);
 }
 
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: clamp(2.5rem, 6vw, 5rem);
+  justify-content: center;
+  gap: var(--spacing-lg);
   min-height: clamp(14rem, 19vw, 17rem);
-  padding: clamp(1.5rem, 2.4vw, 2.2rem);
+  padding: var(--tile-inset);
   color: var(--color-text);
   background: var(--color-surface);
   border: 1px solid color-mix(in srgb, var(--color-muted) 82%, transparent);
@@ -46,10 +46,7 @@
 }
 
 .cardHeader {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: var(--spacing-lg);
+  display: block;
 }
 
 .symbol {
@@ -83,6 +80,9 @@
 }
 
 .arrowFrame {
+  position: absolute;
+  top: var(--tile-inset);
+  right: var(--tile-inset);
   display: grid;
   place-items: center;
   flex: 0 0 auto;
@@ -140,7 +140,12 @@
   .resume {
     grid-column: auto;
     min-height: 9rem;
-    padding: var(--spacing-lg);
+    padding: var(--tile-inset-mobile);
+  }
+
+  .arrowFrame {
+    top: var(--tile-inset-mobile);
+    right: var(--tile-inset-mobile);
   }
 
   .resume {

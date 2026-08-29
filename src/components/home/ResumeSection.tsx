@@ -26,22 +26,22 @@ export default function ResumeSection({ data }: ResumeSectionProps) {
         const isCurrent = isCurrentExperience(exp.startDate, exp.endDate)
 
         return (
-        <div key={exp.company} className={styles.item}>
-          <span
-            className={`${styles.marker} ${isCurrent ? styles.markerCurrent : ''}`.trim()}
-            aria-hidden="true"
-          />
-          <div className={styles.content}>
-            <div className={styles.role} title={exp.role}>{exp.role}</div>
-            <div className={styles.company} title={exp.company}>
-              {exp.href ? (
-                <a href={exp.href} target="_blank" rel="noreferrer">{exp.company}</a>
-              ) : exp.company}
+          <div key={exp.company} className={styles.item}>
+            <span
+              className={`${styles.marker} ${isCurrent ? styles.markerCurrent : ''}`.trim()}
+              aria-hidden="true"
+            />
+            <div className={styles.content}>
+              <div className={styles.role} title={exp.role}>{exp.role}</div>
+              <div className={styles.company} title={exp.company}>
+                {exp.href ? (
+                  <a href={exp.href} target="_blank" rel="noreferrer">{exp.company}</a>
+                ) : exp.company}
+              </div>
+              {exp.team && <div className={styles.team} title={exp.team}>{exp.team}</div>}
+              <div className={styles.dates} title={exp.dates}>{exp.dates}</div>
             </div>
-            {exp.team && <div className={styles.team} title={exp.team}>{exp.team}</div>}
-            <div className={styles.dates} title={exp.dates}>{exp.dates}</div>
           </div>
-        </div>
         )
       })}
     </div>

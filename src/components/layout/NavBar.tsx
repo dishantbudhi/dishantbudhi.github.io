@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import type { SiteData } from '../../types'
 import BasilIcon, { contactIconById } from '../ui/BasilIcon'
@@ -11,9 +11,13 @@ export default function NavBar({ site }: { site: SiteData }) {
   const [isCompact, setIsCompact] = useState(
     () => !isLandingPage || window.scrollY > 32,
   )
-  const headerLinks = [...site.home.contact.links]
-    .filter((link) => link.headerOrder !== undefined)
-    .sort((a, b) => (a.headerOrder ?? 0) - (b.headerOrder ?? 0))
+  const [mobileActionsOpen, setMobileActionsOpen] = useState(false)
+  const headerLinks = useMemo(
+    () => [...site.home.contact.links]
+      .filter((link) => link.headerOrder !== undefined)
+      .sort((a, b) => (a.headerOrder ?? 0) - (b.headerOrder ?? 0)),
+    [site.home.contact.links],
+  )
 
   useEffect(() => {
     function updateHeaderState() {
@@ -43,7 +47,21 @@ export default function NavBar({ site }: { site: SiteData }) {
                   <span>{site.home.hero.workLabel}</span>
                 </a>
               </div>
-              <div className={styles.socialLinks} aria-label="Profile links">
+              <button
+                className={`${styles.mobileActionsToggle} ${mobileActionsOpen ? styles.mobileActionsToggleOpen : ''}`}
+                type="button"
+                aria-label={mobileActionsOpen ? 'Close profile actions' : 'Open profile actions'}
+                aria-expanded={mobileActionsOpen}
+                aria-controls="mobile-profile-actions"
+                onClick={() => setMobileActionsOpen((open) => !open)}
+              >
+                <span aria-hidden="true">•••</span>
+              </button>
+              <div
+                id="mobile-profile-actions"
+                className={`${styles.socialLinks} ${mobileActionsOpen ? styles.mobileActionsOpen : ''}`}
+                aria-label="Profile links"
+              >
                 {headerLinks.map((link) => (
                   <a
                     key={link.id}
@@ -52,6 +70,7 @@ export default function NavBar({ site }: { site: SiteData }) {
                     rel={link.external ? 'noreferrer' : undefined}
                     download={link.download || undefined}
                     aria-label={link.label}
+                    onClick={() => setMobileActionsOpen(false)}
                   >
                     <BasilIcon name={contactIconById[link.id] ?? 'arrowUp'} />
                   </a>

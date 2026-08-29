@@ -3,13 +3,12 @@ import styles from './TagList.module.css'
 
 interface TagListProps {
   tags: string[]
-  align?: 'start' | 'end'
   wrap?: boolean
 }
 
-export default function TagList({ tags, align = 'start', wrap = false }: TagListProps) {
+export default function TagList({ tags, wrap = false }: TagListProps) {
   return (
-    <div className={`${styles.list} ${align === 'end' ? styles.end : ''} ${wrap ? styles.wrap : ''}`}>
+    <div className={`${styles.list} ${wrap ? styles.wrap : ''}`}>
       {tags.map((tag) => (
         <Badge key={tag}>{tag}</Badge>
       ))}

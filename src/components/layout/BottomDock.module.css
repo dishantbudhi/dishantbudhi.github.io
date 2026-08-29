@@ -35,7 +35,6 @@
   flex: 0 0 auto;
   width: 3.25rem;
   height: 3.25rem;
-  transition: margin 280ms cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .item {
@@ -59,15 +58,11 @@
   height: 1.75rem;
 }
 
-.itemSlot:hover {
-  margin-inline: 0.35rem;
-}
-
 .itemSlot:hover .item {
   z-index: 2;
   color: #fff;
   background: rgba(255, 255, 255, 0.08);
-  transform: scale(1.22);
+  transform: scale(1.14);
   opacity: 1;
 }
 
@@ -102,10 +97,6 @@
   .item span {
     width: 1.55rem;
     height: 1.55rem;
-  }
-
-  .itemSlot:hover {
-    margin-inline: 0;
   }
 
   .itemSlot:hover .item {
