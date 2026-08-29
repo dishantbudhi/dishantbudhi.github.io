@@ -1,0 +1,18 @@
+.list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.375rem;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.list::-webkit-scrollbar {
+  display: none;
+}
+
+.wrap {
+  flex-wrap: wrap;
+  overflow-x: visible;
+}

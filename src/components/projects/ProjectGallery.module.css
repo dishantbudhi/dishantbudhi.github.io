@@ -1,0 +1,114 @@
+.track {
+  display: flex;
+  gap: var(--spacing-md);
+  padding-bottom: 0.2rem;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline mandatory;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.track::-webkit-scrollbar {
+  display: none;
+}
+
+.item {
+  position: relative;
+  flex: 0 0 min(82vw, 48rem);
+  min-width: 0;
+  aspect-ratio: 4 / 3;
+  padding: 0;
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-muted);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  cursor: zoom-in;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: var(--image-fit, cover);
+  object-position: var(--image-position, center);
+  transition: transform 300ms ease;
+}
+
+.item:hover img {
+  transform: scale(1.035);
+}
+
+.item:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.item:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
+.placeholder {
+  display: grid;
+  place-content: center;
+  gap: var(--spacing-xs);
+  width: 100%;
+  height: 100%;
+  color: var(--color-subtext);
+  text-align: center;
+  background:
+    radial-gradient(circle at 22% 18%, color-mix(in srgb, var(--color-accent) 24%, transparent), transparent 26%),
+    linear-gradient(145deg, var(--color-preview-start), var(--color-preview-end));
+}
+
+.placeholder strong {
+  color: var(--color-text);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1;
+}
+
+.placeholder small {
+  font-size: var(--font-size-xs);
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  min-height: 1.2rem;
+  margin-top: var(--spacing-md);
+}
+
+.indicator button {
+  width: 0.8rem;
+  height: 0.8rem;
+  padding: 0;
+  cursor: pointer;
+  background: color-mix(in srgb, var(--color-subtext) 42%, transparent);
+  border: 0;
+  border-radius: 999px;
+  transition: width 200ms ease, background-color 200ms ease, transform 200ms ease;
+}
+
+.indicator button:hover {
+  background: color-mix(in srgb, var(--color-accent) 68%, var(--color-subtext));
+  transform: scale(1.1);
+}
+
+.indicator .active {
+  width: 3.25rem;
+  background: var(--color-accent);
+}
+
+@media (max-width: 640px) {
+  .item {
+    flex-basis: 88%;
+  }
+}

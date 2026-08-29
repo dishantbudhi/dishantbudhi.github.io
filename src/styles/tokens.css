@@ -1,0 +1,44 @@
+:root {
+  /* Colors */
+  --color-bg: #121212;
+  --color-surface: #171b21;
+  --color-text: #f0f2f5;
+  --color-subtext: #9ba2ad;
+  --color-accent: #1d6ff4;
+  --color-muted: #303640;
+  --color-preview-start: #20252c;
+  --color-preview-end: #15191e;
+
+  /* Layout */
+  --container-max: 74rem;
+  --content-gutter: clamp(1.25rem, 5vw, 4rem);
+
+  /* Shape */
+  --radius-md: 0.75rem;
+  --radius-lg: 1.25rem;
+
+  /* Elevation */
+  --shadow-soft: 0 1px 0 rgba(255, 255, 255, 0.015);
+
+  /* Spacing */
+  --spacing-xs: clamp(0.4rem, 0.7vw, 0.5rem);
+  --spacing-sm: clamp(0.75rem, 1.4vw, 1rem);
+  --spacing-md: clamp(1.125rem, 2.2vw, 1.5rem);
+  --spacing-lg: clamp(1.5rem, 3.2vw, 2.25rem);
+  --spacing-xl: clamp(2.25rem, 4vw, 3.75rem);
+  --spacing-2xl: clamp(3rem, 6vw, 5.5rem);
+
+  /* Card rhythm */
+  --tile-gap: clamp(0.9rem, 1.8vw, 1.25rem);
+  --tile-inset: clamp(2rem, 3.5vw, 3rem);
+  --tile-inset-mobile: clamp(1.75rem, 7vw, 2.25rem);
+  --tile-content-gap: var(--spacing-lg);
+  --profile-icon-size: clamp(1.443rem, 2.964vw, 2.34rem);
+
+  /* Typography */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-lg: clamp(1.05rem, 1.8vw, 1.125rem);
+  --font-size-xl: 1.25rem;
+  --font-size-display: clamp(2rem, 5vw, 3.5rem);
+}

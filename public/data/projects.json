@@ -1,0 +1,143 @@
+[
+  {
+    "slug": "vantage",
+    "title": "Vantage",
+    "year": 2026,
+    "githubHref": "https://github.com/dishantbudhi/Vantage",
+    "detailImages": [
+      {
+        "src": "/files/projects/vantage/accelerated-greenland-ice-sheet-collapse.png",
+        "alt": "Vantage simulation of accelerated Greenland ice sheet collapse",
+        "fit": "cover"
+      },
+      {
+        "src": "/files/projects/vantage/suez-canal-blocked-+-south-asian-heat-wave.png",
+        "alt": "Vantage simulation of a blocked Suez Canal and South Asian heat wave",
+        "fit": "cover"
+      },
+      {
+        "src": "/files/projects/vantage/texas-grid-failure-during-winter-storm.png",
+        "alt": "Vantage simulation of a Texas grid failure during a winter storm",
+        "fit": "cover"
+      }
+    ],
+    "sections": [
+      {
+        "content": "## Overview\n\nVantage is an interactive catastrophic-risk simulation platform that coordinates specialized AI agents to trace the geopolitical, economic, infrastructure, food-supply, and civilian consequences of a global crisis and visualize the resulting compound risk geographically and over time."
+      },
+      {
+        "content": "## What I Built\n\nI contributed to a Next.js and TypeScript application that turns a user-defined scenario into a structured, streamed analysis: an OpenAI-powered orchestrator decomposes the scenario, five specialist agents run in parallel with recent GDELT context, and a synthesis agent combines their findings into an overall risk assessment. The backend validates inputs and model outputs, enforces agent timeouts, streams status and result events through Server-Sent Events, and supports recorded fallback scenarios when live analysis is unavailable. On the frontend, the system connects the evolving analysis to MapLibre and deck.gl geospatial layers, time-horizon controls, charts, agent-status panels, and a synthesis interface for exploring regional effects and downstream relationships."
+      },
+      {
+        "content": "## Stack\n\nTypeScript · Next.js · React · Multi-Agent Systems · OpenAI API · AI Orchestration · Server-Sent Events · Geospatial Visualization · MapLibre GL · deck.gl"
+      }
+    ]
+  },
+  {
+    "slug": "hooper",
+    "title": "Hooper",
+    "year": 2025,
+    "githubHref": "https://github.com/dishantbudhi/Hooper",
+    "detailImages": [
+      {
+        "src": "/files/projects/hooper/lebron-ramone-james-sr.png",
+        "alt": "Hooper basketball chatbot interface showing a conversation about LeBron James",
+        "fit": "cover"
+      },
+      {
+        "src": "/files/projects/hooper/all-time-nba-starting-five.png",
+        "alt": "Hooper response selecting an all-time NBA starting five",
+        "fit": "cover"
+      },
+      {
+        "src": "/files/projects/hooper/stephen-curry-vs-magic-johnson.png",
+        "alt": "Hooper comparison of Stephen Curry and Magic Johnson",
+        "fit": "cover"
+      }
+    ],
+    "sections": [
+      {
+        "content": "## Overview\n\nHooper is a full-stack basketball chatbot that runs a locally hosted Ollama language model and delivers basketball-focused answers through a responsive React interface with real-time streamed responses."
+      },
+      {
+        "content": "## What I Built\n\nI built the application as separate React/Vite and Node/Express layers, with reusable chat, input, and message components on the client and a focused service layer for Ollama communication on the server. The backend validates and sanitizes messages, constructs a basketball-specific system prompt, streams model output to the browser, exposes server and model health endpoints, and handles unavailable models or failed requests gracefully. I also created responsive loading, error, history, and auto-scroll behaviors and covered the system with frontend component tests, backend unit tests, mocked external-service tests, and API integration tests."
+      },
+      {
+        "content": "## Stack\n\nJavaScript · React · Node.js · Express · Ollama · LLM Integration · Streaming Responses · REST APIs · Vite · Automated Testing"
+      }
+    ]
+  },
+  {
+    "slug": "ballwatch",
+    "title": "BallWatch",
+    "year": 2025,
+    "githubHref": "https://github.com/dishantbudhi/BallWatch",
+    "detailImages": [
+      {
+        "src": "/files/projects/ballwatch/home.png",
+        "alt": "BallWatch home screen with role selection",
+        "fit": "cover"
+      },
+      {
+        "src": "/files/projects/ballwatch/lineup-analysis.png",
+        "alt": "BallWatch lineup analysis dashboard",
+        "fit": "cover"
+      },
+      {
+        "src": "/files/projects/ballwatch/individual-player-tracking.png",
+        "alt": "BallWatch individual player tracking dashboard",
+        "fit": "cover"
+      }
+    ],
+    "sections": [
+      {
+        "content": "## Overview\n\nBallWatch is a full-stack basketball intelligence platform that gives coaches, general managers, fans, and data engineers role-specific tools for scouting, player evaluation, lineup analysis, game planning, and system monitoring."
+      },
+      {
+        "content": "## What I Built\n\nI extended a database-project foundation into a containerized application with a normalized MySQL data model, a modular Flask REST API, and a multi-page Streamlit interface. I implemented basketball and operational workflows ranging from filtered player search, head-to-head comparisons, lineup and situational metrics, scouting reports, draft rankings, and contract-efficiency analysis to pipeline retries, error resolution, health monitoring, and data cleanup. The backend uses Flask blueprints, parameterized SQL queries, joins, aggregations, validation, logging, and consistent JSON responses, while the frontend organizes these capabilities into dedicated dashboards for four user personas and presents analytical results through interactive Plotly visualizations."
+      },
+      {
+        "content": "## Stack\n\nPython · MySQL · Flask · SQL · Streamlit · Database Design · REST APIs · Data Analytics · Docker · Plotly"
+      }
+    ]
+  },
+  {
+    "slug": "spotify-analytics",
+    "title": "Spotify Analytics",
+    "year": 2025,
+    "githubHref": "https://github.com/dishantbudhi/BeatScope",
+    "detailImages": [
+      {
+        "src": "/files/projects/spotify-analytics/home.png",
+        "alt": "BeatScope Spotify Analytics overview dashboard",
+        "fit": "cover"
+      },
+      {
+        "src": "/files/projects/spotify-analytics/daily-listening-hours-over-time.png",
+        "alt": "Daily Spotify listening hours over time chart",
+        "fit": "cover"
+      },
+      {
+        "src": "/files/projects/spotify-analytics/top-artists-by-listening-hours.png",
+        "alt": "Top ten Spotify artists by listening hours chart",
+        "fit": "cover"
+      },
+      {
+        "src": "/files/projects/spotify-analytics/listening-hours-by-time-of-day.png",
+        "alt": "Spotify listening hours by time of day chart",
+        "fit": "cover"
+      }
+    ],
+    "sections": [
+      {
+        "content": "## Overview\n\nSpotify Analytics is a privacy-focused data engineering and visualization platform that transforms more than a decade of personal Spotify history into interactive insights about listening habits, sessions, content preferences, platforms, and behavioral change."
+      },
+      {
+        "content": "## What I Built\n\nI built a modular Python pipeline that discovers and parses multi-file Spotify exports, standardizes music, podcast, audiobook, and video records, validates timestamps and metadata, enriches the resulting dataset, and stores efficient analytical outputs in Parquet and JSON formats. The analysis layer calculates daily, weekly, monthly, seasonal, and year-over-year patterns; measures skips, completions, session duration, and platform usage; and applies clustering to identify recurring listening behaviors. I surfaced those results in a locally processed Streamlit dashboard with interactive Plotly views, real-time filters, content and date controls, and exportable data, keeping the complete workflow independent of external services."
+      },
+      {
+        "content": "## Stack\n\nPython · Pandas · Streamlit · Data Engineering · ETL Pipelines · Data Analytics · Plotly · Scikit-learn · Machine Learning · Data Visualization"
+      }
+    ]
+  }
+]

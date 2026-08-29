@@ -1,0 +1,155 @@
+{
+  "profile": {
+    "name": "Dishant Budhi",
+    "location": "Boston, MA",
+    "address": "360 Huntington Ave, Boston, MA 02115",
+    "mapsHref": "https://www.google.com/maps/dir/40.5757847,-74.349813/Richards+Hall,+360+Huntington+Ave+%23354+Boston,+MA+02115/@41.418315,-75.3482001,630275m/data=!3m2!1e3!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x89e37a18f4247cb1:0x4dc0e0b5547caf2d!2m2!1d-71.0887412!2d42.3399151?entry=ttu&g_ep=EgoyMDI2MDgyNi4wIKXMDSoASAFQAw%3D%3D",
+    "mapImageSrc": "/files/misc/boston.png"
+  },
+  "dockNavigation": [
+    { "id": "home", "label": "Home", "href": "#home", "icon": "home" },
+    { "id": "profile", "label": "Profile", "href": "#profile", "icon": "user" },
+    { "id": "projects", "label": "Projects", "href": "#projects", "icon": "folder" },
+    { "id": "skills", "label": "Skills", "href": "#skills", "icon": "stack" },
+    { "id": "contact", "label": "Contact", "href": "#contact", "icon": "plus" }
+  ],
+  "home": {
+    "hero": {
+      "greeting": "Hey there,",
+      "workLabel": "See my work",
+      "workHref": "#projects"
+    },
+    "headline": "Curious. Adaptable. Intentional.",
+    "ctaLabel": "Get in touch",
+    "ctaHref": "#contact",
+    "experienceLabel": "EXPERIENCE",
+    "projectsGithubHref": "https://github.com/dishantbudhi?tab=repositories",
+    "profileHeading": {
+      "label": "PROFILE",
+      "title": "About Me"
+    },
+    "projectsHeading": {
+      "label": "WORK",
+      "title": "Featured Projects"
+    },
+    "alsoLikeLabel": "OUTSIDE OF WORK",
+    "outsideInterests": [
+      { "label": "Sports", "icon": "gamepad" },
+      { "label": "History", "icon": "history" },
+      { "label": "Music", "icon": "music", "href": "https://open.spotify.com/user/dishant_budhi" },
+      { "label": "Film", "icon": "video", "href": "https://letterboxd.com/dishantbudhi/" },
+      { "label": "Arts", "icon": "palette" },
+      { "label": "Reading", "icon": "book", "href": "https://goodreads.com/dishantbudhi" },
+      { "label": "Politics", "icon": "university" },
+      { "label": "Philosophy", "icon": "lightbulb" },
+      { "label": "Fitness", "icon": "heartbeat" },
+      { "label": "Cooking", "icon": "fire" },
+      { "label": "Technology", "icon": "processor" }
+    ],
+    "focusStatement": "I turn real needs into practical solutions.",
+    "skills": {
+      "label": "EXPERTISE",
+      "title": "My Skills",
+      "categories": [
+        {
+          "title": "Languages",
+          "items": [
+            { "name": "Python", "icon": "/files/admin/skills/python.svg" },
+            { "name": "TypeScript", "icon": "/files/admin/skills/typescript.svg" },
+            { "name": "JavaScript", "icon": "/files/admin/skills/javascript.svg" },
+            { "name": "Java", "icon": "/files/admin/skills/java.svg" },
+            { "name": "MySQL", "icon": "/files/admin/skills/mysql.svg" },
+            {
+              "name": "HTML/CSS",
+              "icon": "/files/admin/skills/html5.svg",
+              "hoverIcon": "/files/admin/skills/css3.svg"
+            }
+          ]
+        },
+        {
+          "title": "Frameworks & Libraries",
+          "items": [
+            { "name": "React", "icon": "/files/admin/skills/react.svg" },
+            { "name": "Node.js", "icon": "/files/admin/skills/nodejs.svg" },
+            { "name": "Express", "icon": "/files/admin/skills/express.svg" },
+            { "name": "Flask", "icon": "/files/admin/skills/flask.svg" },
+            { "name": "Jest", "icon": "/files/admin/skills/jest.svg" },
+            { "name": "Cypress", "icon": "/files/admin/skills/cypress.svg" }
+          ]
+        },
+        {
+          "title": "Developer Tools",
+          "items": [
+            { "name": "Docker", "icon": "/files/admin/skills/docker.svg" },
+            { "name": "Git", "icon": "/files/admin/skills/git.svg" },
+            { "name": "MongoDB", "icon": "/files/admin/skills/mongodb.svg" },
+            { "name": "Databricks", "icon": "/files/admin/skills/databricks.svg" }
+          ]
+        },
+        {
+          "title": "Product & Design Tools",
+          "items": [
+            { "name": "Jira", "icon": "/files/admin/skills/jira.svg" },
+            { "name": "Confluence", "icon": "/files/admin/skills/confluence.svg" },
+            { "name": "Figma", "icon": "/files/admin/skills/figma.svg" },
+            { "name": "SharePoint", "icon": "/files/admin/skills/sharepoint.svg" },
+            { "name": "Excel", "icon": "/files/admin/skills/excel.svg" }
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "heading": {
+        "label": "GET IN TOUCH",
+        "title": "Let's Connect"
+      },
+      "links": [
+        {
+          "id": "email",
+          "label": "Email Me",
+          "description": "budhi.d@northeastern.edu",
+          "href": "mailto:budhi.d@northeastern.edu",
+          "headerOrder": 3
+        },
+        {
+          "id": "linkedin",
+          "label": "LinkedIn",
+          "description": "@dishantbudhi",
+          "href": "https://linkedin.com/in/dishantbudhi",
+          "external": true,
+          "headerOrder": 1
+        },
+        {
+          "id": "github",
+          "label": "GitHub",
+          "description": "@dishantbudhi",
+          "href": "https://github.com/dishantbudhi",
+          "external": true,
+          "headerOrder": 2
+        },
+        {
+          "id": "resume",
+          "label": "Download Resume",
+          "description": "View my full experience and skills",
+          "href": "/files/misc/resume.pdf",
+          "download": true,
+          "headerOrder": 4
+        }
+      ]
+    }
+  },
+  "ui": {
+    "loading": "Loading...",
+    "experienceError": "Failed to load experience.",
+    "projectsError": "Failed to load projects.",
+    "projectNotFound": "Project not found.",
+    "photoDialogLabel": "Photo viewer",
+    "closePhoto": "Close photo viewer"
+  },
+  "footer": {
+    "copyright": "© 2026 Dishant Budhi. All rights reserved.",
+    "sourceLabel": "Check out the code for this site",
+    "sourceHref": "https://github.com/dishantbudhi/dishantbudhi.github.io",
+    "backToTopLabel": "Back to Top"
+  }
+}
