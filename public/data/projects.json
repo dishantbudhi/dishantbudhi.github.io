@@ -4,6 +4,10 @@
     "title": "Vantage",
     "year": 2026,
     "githubHref": "https://github.com/dishantbudhi/Vantage",
+    "projectLink": {
+      "label": "Live Demo",
+      "href": "https://vantage-e4c8.vercel.app/?_vercel_share=k0hGIheFcKvUgBj6gmkktPfQ4Uh41DtA"
+    },
     "detailImages": [
       {
         "src": "/files/projects/vantage/accelerated-greenland-ice-sheet-collapse.png",
